@@ -1,0 +1,246 @@
+.FullBox
+{
+  margin: 25px;
+  margin-top: 15px;
+}
+
+.OptionsBox
+{
+  width: 100%;
+  background-color: var(--white);
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.OptionsText
+{
+  text-align: center;
+  color: var(--ions);
+  font-weight: bold;
+  margin-top: 10px;
+  font-size: 1.1em;
+  margin-bottom: 20px;
+}
+
+.CoinsOptions
+{
+  margin-left: 7.5%;
+  margin-right: 7.5%;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  grid-gap: 7.5%;
+  margin-bottom: 15px;
+}
+
+.CoinsOptions .Option
+{
+  position: relative;
+  background-color: var(--grey);
+  text-align: center;
+  padding: 15px;
+  font-weight: bold;
+  color: var(--black2);
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.CoinsOptions .Option:hover
+{
+  top:-1px;
+  box-shadow: 0px 1px 5px 1px black;
+}
+
+.CoinsOptions .Option.Selected
+{
+  border: 2.25px solid var(--ions);
+}
+
+.CoinsOptions .Option.Selected:hover
+{
+  top: 0px;
+  box-shadow: none;
+}
+
+.AlertsBox, .NotVip
+{
+  margin-top: 15px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: var(--white);
+  border-radius: 10px;
+}
+
+.TimeFrames
+{
+  display: inline-block;
+  width: 49%;
+  vertical-align: top
+}
+
+.TimeFrames:last-child
+{
+  position: relative;
+}
+
+.TimeText
+{
+  text-align: center;
+  font-weight: bold;
+  color: var(--ions);
+}
+
+.AlertsBox hr, .NotVip hr
+{
+  width: 85%;
+  position: relative;
+  left: 7.5%;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  border-image: linear-gradient(to right, var(--white), var(--black2), var(--white)) 1;
+}
+
+.Line
+{
+  margin-bottom: 25px;
+}
+
+
+.Coin, .AlertText
+{
+  display: inline-block;
+}
+
+.Coin
+{
+  margin-left: 35px;
+}
+
+.Coin img
+{
+  width: 30px;
+  position: relative;
+  top: 10px;
+  margin-right: 10px;
+}
+
+.AlertsBox .AlertText
+{
+  margin-left: 15px;
+  font-weight: bold;
+  color: green;
+}
+
+.NotVip .AlertText
+{
+  margin-left: 15px;
+  font-weight: bold;
+  color: var(--black2);
+  display: flex;
+  justify-content: center;
+}
+
+.NoCoins
+{
+  font-weight: bold;
+  text-align: center;
+  color: var(--black2);
+  margin-bottom: 25px;
+}
+
+h1
+{
+  color: var(--ions);
+  border-left: 1px solid;
+  padding: 10px;
+  font-size: 1.3em;
+  margin: auto;
+  margin-left: 10px;
+  border-image: linear-gradient(var(--grey), var(--ions)) 1;
+}
+
+h2
+{
+  border-left: 1px solid;
+  color: var(--black2);
+  padding: 10px;
+  font-size: 1em;
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  border-image: linear-gradient(var(--grey), var(--black2)) 1;
+}
+
+@media only screen and (max-width: 1240px) {
+  .main:not(.active) .TimeFrames
+  {
+    width: 100%;
+  }
+  .main:not(.active) .Coin
+  {
+    margin-left: 15px;
+    display: inline-block;
+    vertical-align: middle;
+    width: 15%;
+  }
+  .main:not(.active) .Coin img
+  {
+    top: 0px;
+  }
+  .main:not(.active) .AlertText
+  {
+    width: 75%;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: left;
+  }
+  .main:not(.active) .Line
+  {
+    text-align: center;
+  }
+  .main:not(.active) .TimeFrames:last-child
+  {
+    left: 0px;
+  }
+  .main:not(.active) .CoinsOptions
+  {
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  .main.active .TimeFrames
+  {
+    width: 100%;
+  }
+  .main.active .Coin
+  {
+    margin-left: 15px;
+    display: inline-block;
+    vertical-align: middle;
+    width: 15%;
+  }
+  .main.active .Coin img
+  {
+    top: 0px;
+  }
+  .main.active .AlertText
+  {
+    width: 75%;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: left;
+  }
+  .main.active .Line
+  {
+    text-align: center;
+  }
+  .main.active .TimeFrames:last-child
+  {
+    left: 0px;
+  }
+  .main.active .CoinsOptions
+  {
+    grid-template-columns: repeat(2,1fr);
+  }
+}

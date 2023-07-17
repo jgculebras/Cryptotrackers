@@ -1,0 +1,102 @@
+<footer class="Footer">
+  <div class="toggleBot">
+     <ion-icon name="menu-outline"></ion-icon>
+  </div>
+  <div class="SocialNetworks">
+    <a target="_blank" rel="nofollow noopener noreferrer" href="https://discord.gg/efSsh6WcRz">
+    <div class="Icon">
+      <ion-icon class="Social" name="logo-discord"></ion-icon>
+    </div>
+    </a>
+    <a target="_blank" rel="noopener noreferrer nofollow" href="https://twitter.com/CryptoTrackerio">
+    <div class="Icon">
+      <ion-icon class="Social" name="logo-twitter"></ion-icon>
+    </div>
+    </a>
+    <a target="_blank" rel="noopener noreferrer nofollow" href="https://www.tiktok.com/@cryptotrackers">
+    <div class="Icon">
+      <ion-icon class="Social" name="logo-tiktok"></ion-icon>
+    </div>
+    </a>
+    <a target="_blank" rel="noopener noreferrer nofollow" href="https://www.instagram.com/cryptotrackersio">
+    <div class="Icon">
+      <ion-icon class="Social" name="logo-instagram"></ion-icon>
+    </div>
+    </a>
+  </div>
+  <a target="_blank" rel="noopener noreferrer nofollow" href = "mailto:cryptotrackershelp@gmail.com">
+  <div class="ContactUs">
+    <div class="Icon">
+      <ion-icon class="Social" name="mail-unread"></ion-icon>
+    </div>
+    <span class="ContactText">
+      Contact Us
+    </span>
+  </div>
+  </a>
+</footer>
+
+<script>
+  let toggleBot = document.querySelector('.toggleBot');
+
+  toggleBot.onclick = function() {
+   navigation.classList.toggle('active');
+   main.classList.toggle('active');
+   document.querySelector('.PageTittleNav').classList.toggle('active');
+   document.querySelector('.PageTittleNavBottom').classList.toggle('active');
+   cards.forEach((item) => {
+     item.classList.toggle('active')
+   });
+   }
+
+
+    let Socials = document.querySelectorAll('.Social');
+
+    let HallOfFameSocials = document.querySelectorAll('.ItemSocial');
+
+    let lightMode = localStorage.getItem("lightMode");
+    let theme = document.querySelector('#theme');
+
+
+    const enableLightMode = () => {
+      document.documentElement.style.setProperty('--blue', '#000000');
+      document.documentElement.style.setProperty('--white', '#242b3f');
+      document.documentElement.style.setProperty('--grey', '#121521');
+      document.documentElement.style.setProperty('--black1', '#fff');
+      document.documentElement.style.setProperty('--black2', '#707a90');
+      document.documentElement.style.setProperty('--ions', '#fff');
+      document.documentElement.style.setProperty('--joker', '#121521');
+      document.documentElement.style.setProperty('--secondary', '#7a849d');
+
+      localStorage.setItem("lightMode", null);
+    };
+
+    const disableLightMode = () => {
+      document.documentElement.style.setProperty('--blue', '#2f72ee');
+      document.documentElement.style.setProperty('--white', '#fff');
+      document.documentElement.style.setProperty('--grey', '#f0f0f0');
+      document.documentElement.style.setProperty('--black1', '#7a849d');
+      document.documentElement.style.setProperty('--black2', '#7b859d');
+      document.documentElement.style.setProperty('--ions', '#000');
+      document.documentElement.style.setProperty('--joker', '#e6e6e6');
+      document.documentElement.style.setProperty('--secondary', '#C2C5AA');
+
+      localStorage.setItem("lightMode", "enabled");
+    };
+
+
+    if (lightMode === "enabled"){
+      disableLightMode();
+    }
+
+    theme.addEventListener("click", () => {
+      lightMode = localStorage.getItem("lightMode");
+      if (lightMode !== "enabled"){
+        disableLightMode();
+      } else {
+        enableLightMode();
+      }
+    });
+
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>

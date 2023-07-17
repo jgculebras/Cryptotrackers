@@ -1,0 +1,383 @@
+.FullBox
+{
+  width: 100%;
+  padding: 25px;
+}
+.List
+{
+  padding: 5px;
+}
+
+.ListItem
+{
+  padding: 10px 0px 10px 0px;
+}
+
+.ListItem .ItemPosition
+{
+  display: inline-flex;
+  justify-content: center;
+  background-color: var(--white);
+  color: var(--black2);
+  width: 10%;
+  padding: 20px;
+  border-radius: 15px;
+  font-weight: bold;
+  box-shadow: 0px 2px 3px black;
+}
+
+.ItemPosition:nth-child(1)
+{
+  color: #FFD700;
+}
+
+.ItemPosition:nth-child(2)
+{
+  color: #c5b8ba;
+}
+
+.ItemPosition:nth-child(3)
+{
+  color: #B87333;
+}
+
+.ListItem .ItemAbout
+{
+  position: relative;
+  vertical-align: middle;
+  display: inline-block;
+  background-color: var(--white);
+  color: var(--black2);
+  width: 84%;
+  margin-left: 2.5%;
+  border-radius: 15px;
+  box-shadow: 0px 2px 3px black;
+}
+
+.TopDiv
+{
+  padding-top: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.TopDiv .Img
+{
+  display: inline-flex;
+  justify-content: center;
+  width: 15%;
+}
+
+.TopDiv .Img img
+{
+  max-width: 50px;
+  border-radius: 17.5px;
+}
+
+.TopDiv .Name
+{
+  display: inline-flex;
+  justify-content: center;
+  vertical-align: top;
+  width: 69%;
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+.TopDiv .Points
+{
+  display: inline-flex;
+  justify-content: center;
+  width: 15%;
+  vertical-align: top;
+  float: right;
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+.BottomDiv
+{
+  margin-bottom: 10px;
+}
+
+.ItemSocial
+{
+  width: 25px;
+  padding: 5px;
+  color: var(--ions);
+  height: 25px;
+}
+
+.BottomDiv .ItemSocials
+{
+  display: inline-flex;
+  justify-content: center;
+  width: 15%;
+  margin-top: 5px;
+  padding-left: 15px;
+}
+
+.BottomDiv .ItemSocials .ItemIcon
+{
+  width: 35px;
+}
+
+.BottomDiv .ItemSocials .ItemIcon:hover
+{
+  background: inherit;
+}
+
+.BottomDiv .Description
+{
+  position: relative;
+  top:-10px;
+  left: 30px;
+  display: inline-flex;
+  justify-content: center;
+  width: 65%;
+  text-align: center;
+}
+
+h1
+{
+  color: var(--ions);
+  border-left: 1px solid;
+  padding: 10px;
+  font-size: 1.3em;
+  margin: auto;
+  margin-left: 10px;
+  border-image: linear-gradient(var(--grey), var(--ions)) 1;
+}
+
+h2
+{
+  border-left: 1px solid;
+  color: var(--black2);
+  padding: 10px;
+  font-size: 1em;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  border-image: linear-gradient(var(--grey), var(--black2)) 1;
+}
+
+@media only screen and (max-width: 1240px) {
+  .main:not(.active) .ItemPosition
+  {
+    display: flex;
+    padding: 15px 25px 15px 25px;
+    width: 5%;
+    margin: auto;
+  }
+  .main:not(.active) .ItemAbout
+  {
+    width: 100%;
+    margin-left: 0px;
+    margin-top: 10px;
+  }
+  .main:not(.active) .FullBox
+  {
+    padding: 10px 5px 10px 5px;
+  }
+  .main:not(.active) .Description
+  {
+    width: 60%;
+    left: 0px;
+    vertical-align: middle;
+  }
+  .main:not(.active) .ItemSocials
+  {
+    width: 23.5%;
+    margin-right: 20px;
+    vertical-align: inherit;
+  }
+  .main:not(.active) .Img
+  {
+    width: 25%;
+  }
+  .main:not(.active) .Name
+  {
+    width: 59%;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  .main.active .ItemPosition
+  {
+    display: flex;
+    padding: 15px 25px 15px 25px;
+    width: 5%;
+    margin: auto;
+  }
+  .main.active .ItemAbout
+  {
+    width: 100%;
+    margin-left: 0px;
+    margin-top: 10px;
+  }
+  .main.active .FullBox
+  {
+    padding: 10px 5px 10px 5px;
+  }
+  .main.active .Description
+  {
+    width: 60%;
+    left: 0px;
+    vertical-align: middle;
+  }
+  .main.active .ItemSocials
+  {
+    width: 23.5%;
+    margin-right: 20px;
+  }
+  .main.active .Img
+  {
+    width: 25%;
+  }
+  .main.active .Name
+  {
+    width: 59%;
+  }
+}
+
+@media only screen and (max-width: 770px) {
+  .main:not(.active) .Description
+  {
+    top:0px;
+    width: 65%;
+    vertical-align: middle;
+    text-align: center;
+    left: 30px;
+  }
+  .main:not(.active) .ItemSocials
+  {
+    display: inline-block;
+    vertical-align: middle;
+    padding-left: 9%;
+    width: 15%;
+    max-width: none;
+  }
+  .main:not(.active) .TopDiv .Img
+  {
+    width: 25%;
+    min-width: inherit;
+  }
+  .main:not(.active) .ItemIcon
+  {
+    left: -8.75px;
+    position: relative;
+  }
+  .main:not(.active) .TopDiv
+  {
+    border-bottom: 1px solid;
+    border-image: linear-gradient(to right, var(--grey), var(--black2), var(--grey)) 1;
+    padding-left: 0px;
+    padding-bottom: 3px;
+  }
+  .main:not(.active) .ItemPosition
+  {
+    display: flex;
+    padding: 15px 25px 15px 25px;
+    width: 5%;
+    margin: auto;
+  }
+  .main:not(.active) .ItemAbout
+  {
+    width: 100%;
+    margin-left: 0px;
+    margin-top: 10px;
+  }
+  .main:not(.active) .ItemSocial
+  {
+    padding: 2px 5px 2px 5px;
+  }
+  .main:not(.active) .FullBox
+  {
+    padding: 10px 5px 10px 5px;
+  }
+  .main:not(.active) .Name
+  {
+    width: 60%;
+  }
+  .main:not(.active) .Points
+  {
+    width: 8%;
+    float: none;
+  }
+  .main:not(.active) .BottomDiv
+  {
+    padding-top: 5px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .main.active .Description
+  {
+    top:0px;
+    width: 65%;
+    left: 30px;
+    vertical-align: middle;
+    text-align: center;
+  }
+  .main.active .ItemSocials
+  {
+    display: inline-block;
+    vertical-align: middle;
+    padding-left: 9%;
+    width: 15%;
+    max-width: none;
+  }
+  .main.active .TopDiv .Img
+  {
+    width: 15%;
+    min-width: inherit;
+    padding-left: 9%;
+  }
+  .main.active .ItemIcon
+  {
+    left: -8.75px;
+    position: relative;
+  }
+  .main.active .TopDiv
+  {
+    border-bottom: 1px solid;
+    border-image: linear-gradient(to right, var(--grey), var(--black2), var(--grey)) 1;
+    padding-left: 0px;
+    padding-bottom: 3px;
+  }
+  .main.active .ItemPosition
+  {
+    display: flex;
+    padding: 15px 25px 15px 25px;
+    width: 5%;
+    margin: auto;
+  }
+  .main.active .ItemAbout
+  {
+    width: 100%;
+    margin-left: 0px;
+    margin-top: 10px;
+  }
+  .main.active .ItemSocial
+  {
+    padding: 2px 5px 2px 5px;
+  }
+  .main.active .FullBox
+  {
+    padding: 10px 5px 10px 5px;
+  }
+  .main.active .Name
+  {
+    width: 80%;
+  }
+  .main.active .Points
+  {
+    width: 3%;
+    float: none;
+  }
+  .main.active .BottomDiv
+  {
+    padding-top: 5px;
+  }
+}

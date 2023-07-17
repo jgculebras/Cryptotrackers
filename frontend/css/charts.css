@@ -1,0 +1,504 @@
+.hide
+{
+  display:none;
+}
+.hideVis
+{
+  visibility: hidden !important;
+}
+.TittleName
+{
+  margin-top: 30px;
+}
+
+.CoinSelected
+{
+  display: inline-flex;
+  justify-content: center;
+  font-size: 1.5em;
+  font-weight: bold;
+  width: 60%;
+  margin-left: 50px;
+  color: var(--black1);
+  vertical-align: middle;
+}
+
+.CoinSelector
+{
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  width: 25%;
+  margin-left: 5%;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.dropbtn {
+  position: relative;
+  background-color: var(--white);
+  color: var(--ions);
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 15px;
+  box-shadow: 0 7px 25px rgba(0,0,0,0.48);
+}
+
+.dropbtn:hover
+{
+  top:-1px;
+  box-shadow: 0px 1px 5px 1px black;
+}
+
+.TimeSelection
+{
+  color: var(--black2);
+  font-weight: bold;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  box-shadow: 0 7px 25px rgba(0,0,0,0.08);
+  transition: 0.3s;
+  display: inline-grid;
+  grid-template-columns: repeat(5,1fr);
+  position: absolute;
+  left: 0px;
+  top: -57.5px;
+}
+
+.ZoomInOut
+{
+  display: inline-flex;
+  justify-content: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  vertical-align:bottom;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  background-color: var(--white);
+  color: var(--black2);
+  position: absolute;
+  right: 0;
+  top: -55px;
+}
+
+.ZoomSelector
+{
+  display: inline-block;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+#Plus, #Minus
+{
+  cursor: pointer;
+    font-size: 1.5em
+}
+
+.Canvas
+{
+  margin-left: 50px;
+  width: 60%;
+  padding: 30px;
+  background-color: var(--white);
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  box-shadow: 0 25px 25px rgba(0,0,0,0.08);
+  transition: 0.3s;
+  display: inline-block; /* Or inline-block */
+  vertical-align: middle;
+  position: relative;
+  margin-top: 62px;
+}
+
+canvas
+{
+  width: 100%;
+}
+
+.Stats
+{
+  display: flex;
+  width: 25%;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 5%;
+  margin-top: 2%;
+}
+
+.marketCap
+{
+  position: relative;
+  min-height: 2px;
+  background-color: var(--white);
+  border-radius: 20px;
+  margin-top: 20px;
+  box-shadow: 0 7px 25px rgba(0,0,0,0.08);
+}
+
+.marketTittle
+{
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+  padding-top: 20px;
+  color: var(--ions);
+  padding-bottom: 15px;
+  border-bottom: 1px solid;
+  border-image: linear-gradient(to right, var(--white), var(--ions), var(--white)) 1;
+}
+
+.totalMarket
+{
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 20px;
+  font-weight: bold;
+  color: #2D6A4F
+
+}
+
+.IconChart
+{
+  position: relative;
+  margin-right: 10px;
+  width: 30px;
+  height: 30px;
+}
+
+.CoinDescription
+{
+  background-color: var(--white);
+  margin-top: 25px;
+  margin-left: 50px;
+  width: 60%;
+  padding: 15px;
+  border-radius: 20px;
+  box-shadow: 0 7px 25px rgba(0,0,0,0.08);
+  color: var(--black2);
+  display: inline-block;
+  vertical-align: top;
+  margin-bottom: 10px;
+}
+
+.Exchanges
+{
+  vertical-align: top;
+  display: inline-block;
+  width: 33%;
+  margin-left: 1%;
+  margin-top: 25px;
+  background-color: var(--white);
+  border-radius: 15px;
+  margin-bottom: 25px;
+}
+
+.ExchangeTittle
+{
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+  width: 100%;
+  color: var(--ions);
+  padding: 15px;
+}
+
+.Label
+{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 5px 0 5px 15px;
+}
+
+.ExchangeIcon
+{
+  vertical-align: bottom;
+  display: inline-flex;
+  width: 10%;
+  font-weight: bold;
+  color: var(--black2);
+}
+
+.ExchangeIcon img
+{
+  width: 25px;
+  height: 25px;
+}
+
+.ExchangeName
+{
+  display: inline-flex;
+  justify-content: center;
+  width: 20%;
+  font-weight: bold;
+  color: var(--black2);
+}
+
+.ExchangePair
+{
+  display: inline-flex;
+  justify-content: center;
+  width: 30%;
+  font-weight: bold;
+  color: var(--black2);
+}
+
+.ExchangeLink
+{
+  display: inline-flex;
+  justify-content: center;
+  width: 30%;
+  font-weight: bold;
+  color: var(--black2);
+  text-decoration: underline;
+}
+
+.TimeSelector
+{
+  padding: 15px 20px 15px 20px;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}
+.TimeBtn
+{
+  padding: 5px;
+  border-radius: 0px;
+  background-color: inherit;
+  border-style: none;
+}
+
+.hoveredTime
+{
+  background-color: var(--white);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.hoveredTime:nth-of-type(1)
+{
+  background-color: var(--white);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.hoveredTime:nth-of-type(5)
+{
+  background-color: var(--white);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.ActiveTime
+{
+  background-color: var(--white);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.ActiveTime:nth-of-type(1)
+{
+  background-color: var(--white);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.ActiveTime:nth-of-type(5)
+{
+  background-color: var(--white);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+a
+{
+  text-decoration: none;
+}
+
+ion-icon
+{
+  color: var(--ions)
+}
+
+h2
+{
+  font-size: 1em;
+}
+
+h3
+{
+  font-size: 1em;
+  font-weight: 1.1em;
+}
+
+h4
+{
+  color: var(--black2);
+  border-left: 1px solid;
+  border-image: linear-gradient(var(--grey), var(--ions)) 1;
+  padding: 10px;
+  font-size: 1.1em;
+  margin: auto;
+  margin-left: 50px;
+  width: 60%;
+  margin-bottom: 10px;
+}
+
+.Exchanges hr
+{
+  border-image: linear-gradient(to right, var(--white), var(--ions), var(--white)) 1;
+}
+
+@media only screen and (max-width: 1150px) {
+  .main:not(.active) .Canvas
+  {
+    width: 90%;
+  }
+  .main:not(.active) .Stats
+  {
+    width: 50%;
+    position: relative;
+    left: 25%;
+    margin-left: 0px;
+  }
+  .main:not(.active) .CoinDescription
+  {
+    margin-left: 10px;
+    width: 95%;
+  }
+  .main:not(.active) .Exchanges
+  {
+    margin-left: 10px;
+    width: 95%;
+  }
+}
+
+@media only screen and (max-width: 1010px) {
+  .main.active .Canvas
+  {
+    width: 90%;
+  }
+  .main.active .Stats
+  {
+    width: 50%;
+    position: relative;
+    left: 25%;
+  }
+  .main.active .CoinDescription
+  {
+    margin-left: 10px;
+    width: 95%;
+  }
+  .main.active .Exchanges
+  {
+    margin-left: 10px;
+    width: 95%;
+  }
+}
+
+@media only screen and (max-width: 840px) {
+  .main:not(.active) .Canvas
+  {
+    margin-bottom: 45px;
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 0px;
+    margin-left: 10px;
+    width: 95%;
+  }
+  .main:not(.active) .ZoomInOut
+  {
+    left: 0;
+    bottom: -55px;
+    right: auto;
+    top: auto;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+  }
+  .main:not(.active) .TimeSelector
+  {
+    padding: 10px 7.5px 10px 7.5px;
+  }
+  .main:not(.active) .TimeSelection
+  {
+    top: -47.5px;
+  }
+  .main:not(.active) .ZoomSelector
+  {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .main:not(.active) .CoinSelector
+  {
+    width: 50%;
+    margin-left: 10px;
+  }
+  .main:not(.active) .CoinSelector a
+  {
+    padding: 13px;
+  }
+  .main:not(.active) .CoinSelected
+  {
+    width: 40%;
+    margin-left: 10px;
+  }
+  .main:not(.active) h4
+  {
+    margin-left: 10px;
+    margin-top: 10px;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .main.active .Canvas
+  {
+    margin-bottom: 45px;
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 0px;
+    margin-left: 10px;
+    width: 95%;
+  }
+  .main.active .ZoomInOut
+  {
+    left: 0;
+    bottom: -55px;
+    right: auto;
+    top: auto;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+  }
+  .main.active .TimeSelector
+  {
+    padding: 10px 7.5px 10px 7.5px;
+  }
+  .main.active .TimeSelection
+  {
+    top: -47.5px;
+  }
+  .main.active .ZoomSelector
+  {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .main.active .CoinSelector
+  {
+    width: 100%;
+    margin-left: 0px;
+    margin-top: 20px;
+  }
+  .main.active .CoinSelected
+  {
+    width: 100%;
+    margin-left: 0px;
+  }
+  .main.active h4
+  {
+    margin-left: 10px;
+    margin-top: 10px;
+  }
+}

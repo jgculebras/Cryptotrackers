@@ -1,0 +1,91 @@
+
+<div class="topbar">
+   <div class="toggle">
+      <ion-icon name="menu-outline"></ion-icon>
+   </div>
+   <div class="Icons">
+     <div id="theme" class="Icon">
+       <ion-icon name="moon-outline"></ion-icon>
+     </div>
+     <div id="profile" class="Icon">
+       <a href="/MyAccount">
+         <ion-icon name="person-outline"></ion-icon>
+       </a>
+     </div>
+   </div>
+   <div class="Metamask">
+      <button id="Metamask" class="btn-primary float-end">
+        <img id="MetamaskIcon" src="/img/MetamaskIcon.svg.png" alt="Metamask Icon">
+        <span id="TextMetamask">Connect Wallet</span>
+      </button>
+   </div>
+</div>
+<script src="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js" type="application/javascript"></script>
+<script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+<script type="text/javascript">
+</script>
+<script>
+const web3 = new Web3(window.ethereum);
+
+function getCookie(name) {
+    var dc = document.cookie;
+    var prefix = name + "=";
+    var begin = dc.indexOf("; " + prefix);
+    if (begin == -1) {
+        begin = dc.indexOf(prefix);
+        if (begin != 0) return null;
+    }
+    else
+    {
+        begin += 2;
+        var end = document.cookie.indexOf(";", begin);
+        if (end == -1) {
+        end = dc.length;
+        }
+    }
+    // because unescape has been deprecated, replaced with decodeURI
+    //return unescape(dc.substring(begin + prefix.length, end));
+    return decodeURI(dc.substring(begin + prefix.length, end));
+}
+
+
+  var jwtCookie = getCookie("jwt");
+
+  
+  if (jwtCookie != null)
+  {
+  jwtCookie = jwtCookie.split(";")[0];
+  }
+
+  var address = null
+
+  if (typeof sessionStorage.getItem("address") !== null) {
+    address = sessionStorage.getItem("address");
+  }
+
+  var menuOpen = 0;
+
+  let toggle = document.querySelector('.toggle');
+
+  toggle.onclick = function() {
+    navigation.classList.toggle('active');
+    main.classList.toggle('active');
+    document.querySelector('.PageTittleNav').classList.toggle('active');
+    document.querySelector('.PageTittleNavBottom').classList.toggle('active');
+    cards.forEach((item) => {
+      item.classList.toggle('active')
+      });
+    };
+
+      document.querySelector('.navigation').classList.add('active');
+      document.querySelector('.main').classList.add('active');
+      document.querySelector('.PageTittleNav').classList.add('active');
+      document.querySelector('.PageTittleNavBottom').classList.add('active');
+      document.querySelectorAll('.cardBox').forEach((item) => {
+        item.classList.add('active')
+      });
+      document.querySelector('.navigation').classList.remove('hide');
+      document.querySelector('.PageTittleNav').classList.remove('hide');
+      document.querySelector('.PageTittleNavBottom').classList.remove('hide');
+
+</script>

@@ -1,0 +1,216 @@
+.PageSelect
+{
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+   position: inherit;
+}
+
+.PageSelect .PageNow
+{
+  line-height: 25px;
+  color: var(--black2);
+  font-weight: bold
+}
+
+.PageSelect ion-icon
+{
+  width: 25px;
+  height: 25px;
+}
+
+.PageSelect .Left, .PageSelect .Right
+{
+  width: 25px;
+  height: 25px;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+.PageSelect .Left:hover, .PageSelect .Right:hover
+{
+  box-shadow: 0px 1px 5px 1px black;
+  border-radius: 15px;
+}
+
+.PageSelect button
+{
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.group {
+ position: relative;
+ margin: 20px;
+}
+
+.input {
+ font-size: 16px;
+ padding: 10px 10px 10px 5px;
+ display: block;
+ width: 200px;
+ border: none;
+ border-bottom: 1px solid #515151;
+ background: transparent;
+ color: var(--ions);
+}
+
+.input:focus {
+ outline: none;
+}
+
+.group label {
+ color: var(--black1);
+ font-size: 18px;
+ font-weight: normal;
+ position: absolute;
+ pointer-events: none;
+ left: 5px;
+ top: 10px;
+ transition: 0.2s ease all;
+ -moz-transition: 0.2s ease all;
+ -webkit-transition: 0.2s ease all;
+}
+
+.input:focus ~ label, .input:valid ~ label {
+ top: -20px;
+ font-size: 14px;
+ color: var(--black2);
+}
+
+.bar {
+ position: relative;
+ display: block;
+ width: 200px;
+}
+
+.bar:before, .bar:after {
+ content: '';
+ height: 2px;
+ width: 0;
+ bottom: 1px;
+ position: absolute;
+ background: var(--black1);
+ transition: 0.2s ease all;
+ -moz-transition: 0.2s ease all;
+ -webkit-transition: 0.2s ease all;
+}
+
+.bar:before {
+ left: 50%;
+}
+
+.bar:after {
+ right: 50%;
+}
+
+.input:focus ~ .bar:before, .input:focus ~ .bar:after {
+ width: 50%;
+}
+
+.highlight {
+ position: absolute;
+ height: 60%;
+ width: 100px;
+ top: 25%;
+ left: 0;
+ pointer-events: none;
+ opacity: 0.5;
+}
+
+.input:focus ~ .highlight {
+ animation: inputHighlighter 0.5s ease;
+}
+
+@keyframes inputHighlighter {
+ from {
+  background: var(--black1);
+ }
+
+ to {
+  width: 0;
+  background: transparent;
+ }
+}
+
+.MainBox
+{
+  padding: 20px;
+}
+
+.MainBox .Tittle
+{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+  color: var(--black1);
+  font-size: 3em;
+}
+
+.MainBox .Tittle img
+{
+  position: relative;
+  top:-7.5px;
+  width: 75px;
+  margin-right: 5px;
+}
+
+.ThetanGrid
+{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-gap: 25px;
+}
+
+.ThetanBox
+{
+  background-color: var(--white);
+  color: var(--black2);
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 7px 25px rgba(0,0,0,0.08);
+  cursor: pointer;
+  transition: 0.3s
+}
+
+.ThetanBox:hover
+{
+  top:-1px;
+  box-shadow: 0px 1px 5px 1px black;
+}
+
+
+.ThetanBox img
+{
+  display: inline-block;
+  width: 30%;
+  height: 150px;
+  object-fit: contain;
+}
+
+.ThetanBox .Stats
+{
+  display: inline-block;
+  width: 62.5%;
+  margin-left: 7.5%;
+  vertical-align: top;
+}
+
+.ThetanBox li
+{
+ font-weight: bold;
+ padding: 10px;
+ margin-right: 5px;
+}
+
+.ThetanBox li div
+{
+  display: inline-block;
+}
+
+ion-icon
+{
+  color: var(--ions);
+}

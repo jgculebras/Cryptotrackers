@@ -1,0 +1,91 @@
+.BigBox
+{
+  padding: 20px;
+}
+
+.BigBox .Tittle
+{
+  color: var(--black1);
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.ChainGrid
+{
+  padding: 15px;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  grid-gap: 50px;
+}
+
+.Chain
+{
+  position: relative;
+  border-radius: 15px;
+  background-color: var(--white);
+  color: var(--black2);
+  padding: 10px;
+  box-shadow: 0 7px 25px rgba(0,0,0,0.08);
+  transition: 0.2s;
+  cursor: pointer;
+  text-align: center;
+}
+
+.Chain:hover
+{
+  top:-1px;
+  box-shadow: 0px 1px 5px 1px black;
+}
+
+.ChainImg, .ChainName
+{
+  display: inline-block;
+}
+
+.ChainImg
+{
+  width: 50px;
+}
+
+.ChainName
+{
+  margin-left: 15%;
+  vertical-align: top;
+  line-height: 50px;
+  font-weight: bold;
+}
+
+.Chain .ChainImg img
+{
+  max-width: 100%;
+  max-height: 100%;
+}
+
+@media only screen and (max-width: 1300px) {
+  .main:not(.active) .ChainGrid
+  {
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+
+@media only screen and (max-width: 1160px) {
+  .main.active .ChainGrid
+  {
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+
+@media only screen and (max-width: 740px) {
+  .main:not(.active) .ChainGrid
+  {
+    grid-template-columns: repeat(1,1fr);
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .main.active .ChainGrid
+  {
+    grid-template-columns: repeat(1,1fr);
+  }
+}

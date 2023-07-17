@@ -1,0 +1,147 @@
+.PageSelect
+{
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+  margin-bottom: 25px;
+   position: inherit;
+}
+
+.PageSelect .PageNow
+{
+  line-height: 25px;
+  color: var(--black2);
+  font-weight: bold
+}
+
+.PageSelect ion-icon
+{
+  width: 25px;
+  height: 25px;
+}
+
+.PageSelect .Left, .PageSelect .Right
+{
+  width: 25px;
+  height: 25px;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+.PageSelect .Left:hover, .PageSelect .Right:hover
+{
+  box-shadow: 0px 1px 5px 1px black;
+  border-radius: 15px;
+}
+
+.PageSelect button
+{
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.Tittle
+{
+  margin-top: 20px;
+  color: var(--ions)
+}
+
+.NewsFullBox
+{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  padding: 20px;
+}
+
+.NewBox
+{
+  background-color: var(--white);
+  padding: 10px;
+  border-radius: 15px;
+  width: 95%;
+  margin: 10px;
+  cursor: pointer;
+  box-shadow: 0 7px 25px rgba(0,0,0,0.08);
+  transition: 0.3s
+}
+
+.NewBox:hover
+{
+top:-1px;
+box-shadow: 0px 1px 5px 1px black;
+}
+
+hr
+{
+  margin: 20px;
+}
+
+.NewBox h3
+{
+  color: var(--ions);
+  display: flex;
+  justify-content: center;
+}
+
+.NewBox h4
+{
+  color: var(--black2);
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: 5px;
+  font-size: 1.1em;
+  font-weight: normal;
+  width: 79%;
+  margin-right: 5%;
+}
+
+.NewBox img
+{
+  display: inline-block;
+  width: 10%;
+  vertical-align: middle;
+}
+
+ion-icon
+{
+  color: var(--ions);
+}
+
+h1
+{
+  border-left: 1px solid;
+  padding: 10px;
+  font-size: 1.3em;
+  margin: auto;
+  margin-left: 2.5%;
+  border-image: linear-gradient(var(--grey), var(--ions)) 1;
+}
+
+h2
+{
+  border-left: 1px solid;
+  color: var(--black2);
+  padding: 10px;
+  font-size: 1em;
+  margin: auto;
+  margin-top: 20px;
+  margin-left: 2.5%;
+  border-image: linear-gradient(var(--grey), var(--black2)) 1;
+}
+
+
+@media only screen and (max-width: 940px) {
+  .main:not(.active) .NewsFullBox
+  {
+    grid-template-columns: repeat(1,1fr);
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .main.active .NewsFullBox
+  {
+    grid-template-columns: repeat(1,1fr);
+  }
+}

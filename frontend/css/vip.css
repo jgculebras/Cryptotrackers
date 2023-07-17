@@ -1,0 +1,438 @@
+h6
+{
+  color: var(--black2);
+  text-align: center;
+  margin: 15px;
+  font-style: italic;
+}
+
+.remove
+{
+  display: none !important;
+}
+
+.vipCheck
+{
+  position: relative;
+  text-align: center;
+  color: var(--black2);
+  margin: 10px;
+  font-weight: bold;
+  font-size: 1.075em;
+  transition: 0.3s;
+}
+
+.ChainTittle
+{
+  text-align: center;
+  color: var(--ions);
+  font-weight: bold;
+  text-decoration: underline;
+  margin: 15px;
+}
+
+.paymentMethods
+{
+  display: flex;
+  justify-content: center
+}
+
+.method
+{
+  display: inline-block;
+  margin-left: 25px;
+  margin-right: 25px;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+.currencyMethods
+{
+  display: flex;
+  justify-content: center;
+  margin-top: 35px;
+
+}
+
+.currMethod
+{
+  display: inline-block;
+  margin-left: 25px;
+  margin-right: 25px;
+  font-weight: bold;
+}
+
+.activeChain
+{
+  border: 3px solid white;
+  border-radius: 15px;
+}
+
+.activeChain .Chain:hover
+{
+  top: 0px;
+  box-shadow: none;
+}
+
+.activeCoin
+{
+  border: 3px solid white;
+  border-radius: 15px;
+}
+
+.activeCoin .Chain:hover
+{
+  top: 0px;
+  box-shadow: none;
+}
+
+.Chain
+{
+  position: relative;
+  border-radius: 15px;
+  background-color: var(--white);
+  color: var(--black2);
+  padding: 10px;
+  box-shadow: 0 7px 25px rgba(0,0,0,0.08);
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.Chain:hover
+{
+  top:-1px;
+  box-shadow: 0px 1px 5px 1px black;
+}
+
+.ChainImg, .ChainName
+{
+  display: inline-block;
+}
+
+.ChainImg
+{
+  width: 40px;
+  margin-left: 15px;
+}
+
+.ChainName
+{
+  margin-left: 10px;
+  margin-right: 25px;
+  vertical-align: top;
+  line-height: 40px;
+  font-weight: bold;
+}
+
+.Chain .ChainImg img
+{
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.vipBox
+{
+  position: relative;
+  width: 100%;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-gap: 25px;
+}
+.vipBox .vipCard
+{
+  position: relative;
+  background: var(--white);
+  border-radius: 20px;
+  box-shadow: 0 7px 25px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+.vipBox .vipCard.unactive
+{
+  filter: blur(2px);
+  pointer-events: none;
+}
+
+.vipBox .vipCard:hover
+{
+  top:-1px;
+  box-shadow: 0px 1px 5px 1px black;
+}
+.vipBox .vipCardName
+{
+  color: var(--black2);
+  position: relative;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  padding-top: 30px;
+  font-size: 1.15em;
+}
+.vipBox .vipPrice
+{
+  color: var(--black2);
+  display: flex;
+  justify-content: center;
+  font-size: 1.5em;
+  padding: 20px;
+}
+.vipBox .vipPrice .DollarPrice
+{
+
+}
+.vipBox .vipPrice .Month
+{
+  font-size: 0.5em;
+  line-height: 35px;
+}
+.vipBox .Perks
+{
+  color: var(--black2);
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+}
+.vipBox .subscribeButton
+{
+  position: relative;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.vipBox .subscribeButton button
+{
+  position: relative;
+  cursor: pointer;
+  padding: 20px;
+  color: white;
+  border-radius: 10px;
+  background-color: var(--joker);
+  border-color:  var(--joker);
+  color: var(--ions);
+  font-weight: bold;
+}
+
+.vipBox .subscribeButton button:hover
+{
+  box-shadow: 0px 1px 5px 1px black;
+}
+
+.vipBox .subscribeButton span
+{
+  position: relative;
+  padding: 5px;
+}
+
+.AlertToBuy
+{
+  padding: 10px;
+  position: absolute;
+  top: 30%;
+  left: calc(50% - 217px);
+  width: 435px;
+  background-color: var(--white);
+  box-shadow: 0px 2px 3px 2px black;
+  color: var(--black2);
+  border-radius: 10px;
+}
+
+.AlertToBuy div
+{
+  text-align: center;
+  padding: 10px;
+  font-weight: bold;
+}
+
+#MetamaskVip{
+  position: relative;
+  width: 25px;
+  height: 25px;
+  top: 2px;
+  margin-left: 3px;
+}
+
+br{
+  display: block;
+   margin: 10px 0;
+  content: " ";
+}
+p
+{
+  text-align: center;
+}
+
+.Confirm
+{
+  position: absolute;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  top: 35%;
+  left: 32.5%;
+  z-index: 1;
+  width: 35%;
+  text-align: center;
+  font-weight: bold;
+  background-color: var(--white);
+  box-shadow: 0px 2px 3px 2px black;
+  color: var(--ions);
+  border-radius: 10px;
+  filter: none;
+}
+
+.Confirm .Text
+{
+  margin-bottom: 25px;
+}
+
+.Confirm .InfoText
+{
+  margin-top: 25px;
+}
+
+/* From uiverse.io by @satyamchaudharydev */
+.loader {
+ --height-of-loader: 4px;
+ --loader-color: #0071e2;
+ width: 100%;
+ height: var(--height-of-loader);
+ border-radius: 30px;
+ background-color: rgba(0,0,0,0.2);
+ position: relative;
+}
+
+.loader::before {
+ content: "";
+ position: absolute;
+ background: var(--black2);
+ top: 0;
+ left: 0;
+ width: 0%;
+ height: 100%;
+ border-radius: 30px;
+ animation: moving 1s ease-in-out infinite;
+}
+
+.loader.confirmed
+{
+  background-color: green;
+}
+
+.loader.confirmed::before
+{
+  animation: none;
+}
+
+.loader.denied
+{
+  background-color: red;
+}
+
+.loader.denied::before
+{
+  animation: none;
+}
+
+.Confirm .InfoButton
+{
+  position: relative;
+  background-color: var(--grey);
+  border-color: var(--grey);
+  color: var(--ions);
+  font-weight: bold;
+  margin-top: 20px;
+  padding: 10px 20px 10px 20px;
+  border-radius: 10px;
+}
+
+.Confirm .InfoButton:hover
+{
+  top:-1px;
+  box-shadow: 0px 1px 5px 1px black;
+  cursor: pointer;
+}
+
+.main.unactive > *:not(.Confirm)
+{
+  filter: blur(1px);
+  pointer-events: none;
+}
+
+@keyframes moving {
+ 50% {
+  width: 100%;
+ }
+
+ 100% {
+  width: 0;
+  right: 0;
+  left: unset;
+ }
+}
+
+.vipInfo
+{
+  width: 60%;
+  position: relative;
+  left: 20%;
+  text-align: center;
+  margin-bottom: 20px;
+  color: var(--black2);
+  font-size: 0.9em;
+  font-style: italic;
+}
+
+hr{
+  border-image: linear-gradient(to right, var(--white), var(--black2), var(--white)) 1;
+}
+
+@media only screen and (max-width: 1060px) {
+  .main:not(.active) .method
+  {
+    text-align: center;
+    width: 50%;
+    margin-left: 25%;
+    display: block;
+  }
+  .main:not(.active) .currMethod
+  {
+    width: 30%;
+    text-align: center;
+  }
+  .main:not(.active) .vipBox
+  {
+    grid-template-columns: repeat(1,1fr);
+  }
+  .main:not(.active) .paymentMethods
+  {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .main.active .method
+  {
+    text-align: center;
+    width: 50%;
+    margin-left: 25%;
+    display: block;
+  }
+  .main.active .currMethod
+  {
+    width: 30%;
+    text-align: center;
+  }
+  .main.active .vipBox
+  {
+    grid-template-columns: repeat(1,1fr);
+  }
+  .main.active .paymentMethods
+  {
+    display: block;
+  }
+}

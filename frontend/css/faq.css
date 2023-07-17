@@ -1,0 +1,50 @@
+.FAQTittle
+{
+  position: relative;
+  color: var(--black2);
+  margin-top: 15px;
+  margin-bottom: 10px;
+  font-size: 0.75em;
+  display: flex;
+  justify-content: center;
+}
+.QuestionText:nth-of-type(1)
+{
+  display: inline-block;
+  margin-top: 15px;
+}
+.FullBox
+{
+  width: 100%;
+}
+.Question
+{
+  display: inline-block;
+  font-size: 1.3em;
+  font-weight: bold;
+  width: 90%;
+  margin-left: 5%;
+  padding: 20px;
+  text-align: center;
+  color: var(--black1);
+}
+.Answer
+{
+  width: 70%;
+  margin-left: 15%;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 1.1em;
+  color: var(--black2);
+  text-align: center;
+}
+
+h2,h3
+{
+  font-size: 1em;
+}
+
+h3
+{
+  font-weight: normal;
+}

@@ -1,0 +1,7 @@
+.BigBox h1
+{
+  color: var(--black2);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+}

@@ -1,0 +1,264 @@
+.group {
+ position: relative;
+ margin-top: 15px;
+}
+
+.input {
+ font-size: 16px;
+ padding: 10px 10px 10px 5px;
+ display: block;
+ width: 200px;
+ border: none;
+ border-bottom: 1px solid;
+ border-image: linear-gradient(to right, var(--white), var(--ions), var(--white)) 1;
+ background: transparent;
+ color: var(--ions);
+}
+
+.input:focus {
+ outline: none;
+}
+
+.group label {
+ color: var(--black1);
+ font-size: 18px;
+ font-weight: normal;
+ position: absolute;
+ pointer-events: none;
+ left: 5px;
+ top: 10px;
+ transition: 0.2s ease all;
+ -moz-transition: 0.2s ease all;
+ -webkit-transition: 0.2s ease all;
+}
+
+.input:focus ~ label, .input:valid ~ label {
+ top: -20px;
+ font-size: 14px;
+ color: var(--black2);
+}
+
+.bar {
+ position: relative;
+ display: block;
+ width: 200px;
+}
+
+.bar:before, .bar:after {
+ content: '';
+ height: 2px;
+ width: 0;
+ bottom: 1px;
+ position: absolute;
+ background: var(--black1);
+ transition: 0.2s ease all;
+ -moz-transition: 0.2s ease all;
+ -webkit-transition: 0.2s ease all;
+}
+
+.bar:before {
+ left: 50%;
+}
+
+.bar:after {
+ right: 50%;
+}
+
+.input:focus ~ .bar:before, .input:focus ~ .bar:after {
+ width: 50%;
+}
+
+.highlight {
+ position: absolute;
+ height: 60%;
+ width: 100px;
+ top: 25%;
+ left: 0;
+ pointer-events: none;
+ opacity: 0.5;
+}
+
+.input:focus ~ .highlight {
+ animation: inputHighlighter 0.5s ease;
+}
+
+@keyframes inputHighlighter {
+ from {
+  background: var(--black1);
+ }
+
+ to {
+  width: 0;
+  background: transparent;
+ }
+}
+
+.hide
+{
+  visibility: hidden
+}
+
+.FullBox
+{
+  padding: 20px;
+}
+
+.ChartSelectTittle
+{
+  color: var(--black1);
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.TokensGrid
+{
+  margin-top: 25px;
+  display: grid;
+  grid-template-columns: repeat(7,1fr);
+  grid-gap: 25px;
+}
+
+.Coin
+{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  background-color: var(--white);
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 0 7px 25px rgba(0,0,0,0.08);
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.Coin:hover
+{
+  top:-1px;
+  box-shadow: 0px 1px 5px 1px black;
+}
+
+.coinIcon
+{
+  position: relative;
+  margin-right: 10px;
+  width: 25px;
+  height: 25px;
+}
+
+.Coin .coinName
+{
+  line-height: 25px;
+  font-weight: bold;
+  color: var(--black2);
+  text-align: center;
+}
+
+.PageSelect
+{
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+   position: inherit;
+}
+
+.PageSelect .PageNow
+{
+  line-height: 25px;
+  color: var(--black2);
+  font-weight: bold
+}
+
+.PageSelect ion-icon
+{
+  width: 25px;
+  height: 25px;
+}
+
+.PageSelect .Left, .PageSelect .Right
+{
+  width: 25px;
+  height: 25px;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+.PageSelect .Left:hover, .PageSelect .Right:hover
+{
+  box-shadow: 0px 1px 5px 1px black;
+  border-radius: 15px;
+}
+
+.PageSelect button
+{
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+a
+{
+  text-decoration: none
+}
+
+ion-icon
+{
+  color: var(--ions)
+}
+
+h2
+{
+  color: var(--black2);
+  border-left: 1px solid;
+  border-image: linear-gradient(var(--grey), var(--ions)) 1;
+  padding: 10px;
+  font-size: 1.1em;
+  margin: auto;
+}
+
+
+@media only screen and (max-width: 1300px) {
+  .main:not(.active) .TokensGrid
+  {
+    grid-template-columns: repeat(5,1fr);
+  }
+}
+
+@media only screen and (max-width: 1160px) {
+  .main.active .TokensGrid
+  {
+    grid-template-columns: repeat(5,1fr);
+  }
+}
+
+
+@media only screen and (max-width: 1000px) {
+  .main:not(.active) .TokensGrid
+  {
+    grid-gap: 25px
+  }
+}
+
+@media only screen and (max-width: 860px) {
+  .main.active .TokensGrid
+  {
+    grid-gap: 25px
+  }
+}
+
+@media only screen and (max-width: 870px) {
+  .main:not(.active) .TokensGrid
+  {
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 25px
+  }
+}
+
+@media only screen and (max-width: 730px) {
+  .main.active .TokensGrid
+  {
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 25px
+  }
+}

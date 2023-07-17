@@ -1,0 +1,140 @@
+.BigBox
+{
+  padding: 20px;
+}
+
+
+.BigBox .DaysGrid
+{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+}
+
+.BigBox .dayDiv
+{
+  background-color: var(--white);
+  padding: 20px;
+  margin: auto;
+  margin-top: 20px;
+  border-radius: 15px;
+  width: 95%;
+}
+
+.BigBox .dayDiv .Date
+{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  color: var(--ions);
+  padding-bottom: 10px;
+  font-weight: bold;
+  font-size: 1.1em;
+  border-bottom: 1px solid;
+  border-image: linear-gradient(to right, var(--white), var(--ions), var(--white)) 1;
+}
+
+.BigBox .dayDiv .ListItem
+{
+  padding-top: 10px;
+  color: var(--black2);
+  margin-left: 10px;
+  font-weight: bold
+}
+
+.BigBox .dayDiv .Name
+{
+  display: inline-block;
+  width: 25%;
+}
+.BigBox .dayDiv .Reward
+{
+  display: inline-flex;
+  justify-content: center;
+  width: 40%;
+}
+.BigBox .dayDiv .Link
+{
+  display: inline-flex;
+  justify-content: center;
+  width: 20%;
+}
+
+.DayHeader
+{
+  padding-top: 10px;
+  margin-left: 10px;
+  color: var(--ions);
+  font-weight: bold;
+}
+
+.DayHeader .projectTittle
+{
+  display: inline-flex;
+  width: 25%;
+}
+
+.DayHeader .Reward
+{
+  display: inline-flex;
+  justify-content: center;
+  width: 40%;
+}
+
+.DayHeader .Link
+{
+  display: inline-flex;
+  justify-content: center;
+  width: 20%;
+}
+
+a
+{
+  text-decoration: none;
+  color: #00ace6;
+}
+
+h1
+{
+  color: var(--ions);
+  border-left: 1px solid;
+  padding: 10px;
+  font-size: 1.3em;
+  margin: auto;
+  margin-left: 10px;
+  border-image: linear-gradient(var(--grey), var(--ions)) 1;
+}
+
+h2
+{
+  border-left: 1px solid;
+  color: var(--black2);
+  padding: 10px;
+  font-size: 1em;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  border-image: linear-gradient(var(--grey), var(--black2)) 1;
+}
+
+@media only screen and (max-width: 940px) {
+  .main:not(.active) .DaysGrid
+  {
+    grid-template-columns: repeat(1,1fr);
+  }
+  .main:not(.active) #dayDiv
+  {
+    padding: 15px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .main.active .DaysGrid
+  {
+    grid-template-columns: repeat(1,1fr);
+  }
+  .main.active #dayDiv
+  {
+    padding: 15px;
+  }
+}

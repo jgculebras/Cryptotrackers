@@ -1,0 +1,401 @@
+.PageSelect
+{
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  position: inherit;
+}
+
+.PageSelect .PageNow
+{
+  line-height: 25px;
+  color: var(--black2);
+  font-weight: bold
+}
+
+.PageSelect ion-icon
+{
+  width: 25px;
+  height: 25px;
+}
+
+.PageSelect .Left, .PageSelect .Right
+{
+  width: 25px;
+  height: 25px;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+.PageSelect .Left:hover, .PageSelect .Right:hover
+{
+  box-shadow: 0px 1px 5px 1px black;
+  border-radius: 15px;
+}
+
+.PageSelect button
+{
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.Tittle
+{
+  margin-top: 20px;
+  color: var(--ions);
+}
+
+.ReviewsBox
+{
+  padding: 20px;
+}
+
+.Review
+{
+  margin-top: 15px;
+  position: relative;
+  vertical-align: middle;
+  display: inline-block;
+  background-color: var(--white);
+  color: var(--black2);
+  width: 95%;
+  margin-left: 2.5%;
+  border-radius: 15px;
+  box-shadow: 0px 2px 3px black;
+}
+
+.TopDiv
+{
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.TopDiv .Img
+{
+  display: inline-flex;
+  justify-content: center;
+  width: 15%;
+  transition: 0.5s;
+}
+
+.TopDiv .Img img
+{
+  max-width: 50px;
+  border-radius: 15px;
+}
+
+.TopDiv .ProjectName
+{
+  display: inline-flex;
+  justify-content: center;
+  vertical-align: top;
+  margin-left: 10px;
+  width: 75%;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+.TopDiv .Stars
+{
+  display: inline-flex;
+  justify-content: center;
+  width: 25%;
+  vertical-align: top;
+  float: right;
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+.BottomDiv
+{
+  margin-bottom: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.ItemSocial
+{
+  width: 25px;
+  padding: 5px;
+  color: var(--ions);
+  height: 25px;
+}
+
+.BottomDiv .ItemSocials
+{
+  display: inline-flex;
+  justify-content: center;
+  width: 15%;
+  margin-top: 5px;
+  transition: 0.5s
+}
+
+.BottomDiv .ItemSocials .ItemIcon
+{
+  width: 35px;
+  text-align: center;
+}
+
+.BottomDiv .ItemSocials .ItemIcon:hover
+{
+  background: inherit;
+}
+
+.BottomDiv .Description
+{
+  position: relative;
+  top:-10px;
+  display: inline-flex;
+  justify-content: center;
+  width: 75%;
+  margin-left: 10px;
+  text-align: center;
+  font-style: italic;
+  transition: 0.5s
+}
+
+.IconName
+{
+  font-size: 0.45em;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.LeftSide
+{
+  padding-top: 10px;
+  display: inline-block;
+  width: 75%;
+}
+
+.RightSide
+{
+  padding-top: 15px;
+  display: inline-block;
+  width: 24%;
+  vertical-align: top;
+  padding-bottom: 15px;
+  padding-right: 10px;
+}
+
+.Calif
+{
+  display: flex;
+  width: 100%;
+}
+
+.Calif .Name
+{
+  width: 55%;
+  display: flex;
+  justify-content: center;
+}
+
+.Calif .Stars
+{
+  width: 50%;
+}
+
+ion-icon
+{
+  color: var(--ions);
+}
+
+h1
+{
+  border-left: 1px solid;
+  padding: 10px;
+  font-size: 1.3em;
+  margin: auto;
+  margin-left: calc(20px + 2.5%);
+  border-image: linear-gradient(var(--grey), var(--ions)) 1;
+}
+
+h2
+{
+  border-left: 1px solid;
+  color: var(--black2);
+  padding: 10px;
+  font-size: 0.8em;
+  margin: auto;
+  margin-top: 20px;
+  margin-left: calc(20px + 2.5%);
+  border-image: linear-gradient(var(--grey), var(--black2)) 1;
+}
+
+h4
+{
+  font-weight: normal;
+}
+
+@media only screen and (max-width: 1090px) {
+  .main:not(.active) .ItemSocials
+  {
+    width: 18%;
+  }
+  .main:not(.active) .TopDiv .Img
+  {
+    margin-left: 1%;
+  }
+  .main:not(.active) .Description
+  {
+    margin-left: 15px
+  }
+}
+
+@media only screen and (max-width: 950px) {
+  .main.active .Description
+  {
+    margin-left: 15px
+  }
+  .main.active .TopDiv .Img
+  {
+    margin-left: 1%;
+  }
+  .main.active .ItemSocials
+  {
+    width: 18%;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .main:not(.active) .RightSide
+  {
+    width: 100%;
+    padding-top: 5px;
+  }
+  .main:not(.active) .LeftSide
+  {
+    width: 100%;
+  }
+  .main:not(.active) .ItemSocials
+  {
+    width: 20%
+  }
+  .main:not(.active) .TopDiv .Img
+  {
+    margin-left: 2.5%;
+  }
+  .main:not(.active) .Calif .Name
+  {
+    width: 50%;
+    text-align: right;
+    margin-right: 10px;
+  }
+  .main:not(.active) .Calif .Stars
+  {
+    width: 50%;
+  }
+  .main:not(.active) .Description
+  {
+    margin-left: 30px;
+    width: 65%;
+  }
+}
+
+@media only screen and (max-width: 760px) {
+  .main.active .RightSide
+  {
+    width: 100%;
+    padding-top: 5px;
+  }
+  .main.active .LeftSide
+  {
+    width: 100%;
+  }
+  .main.active .ItemSocials
+  {
+    width: 20%;
+  }
+  .main.active .TopDiv .Img
+  {
+    margin-left: 2.5%;
+  }
+  .main.active .Calif .Name
+  {
+    width: 50%;
+    text-align: right;
+    margin-right: 10px;
+  }
+  .main.active .Calif .Stars
+  {
+    width: 50%;
+  }
+  .main.active .Description
+  {
+    margin-left: 30px;
+    width: 65%;
+  }
+}
+
+@media only screen and (max-width: 620px) {
+  .main:not(.active) .ItemSocials
+  {
+    width: 27.5%
+  }
+  .main:not(.active) .TopDiv .Img
+  {
+    margin-left: 6%;
+  }
+  .main:not(.active) .Description
+  {
+    width: 100%;
+ c   margin-left: 0px;
+    padding: 7px;
+    top: 10px;
+  }
+  .main:not(.active) .TopDiv .ProjectName
+  {
+    vertical-align: middle;
+  }
+  .main:not(.active) .RightSide
+  {
+    padding-top: 15px;
+  }
+  .main:not(.active) .IconName
+  {
+    display:none;
+  }
+  .main:not(.active) .ItemSocials .ItemIcon
+  {
+    width: 25px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .main.active .ItemSocials
+  {
+    width: 27.5%;
+  }
+  .main.active .ItemSocials .ItemIcon
+  {
+    width: 25px;
+  }
+  .main.active .TopDiv .Img
+  {
+    margin-left: 6%;
+  }
+  .main.active .Description
+  {
+    width: 100%;
+    margin-left: 0px;
+    padding: 7px;
+    top: 10px
+  }
+  .main.active .TopDiv .ProjectName
+  {
+    vertical-align: middle;
+  }
+  .main.active .RightSide
+  {
+    padding-top: 15px;
+  }
+  .main.active .IconName
+  {
+    display: none;
+  }
+}

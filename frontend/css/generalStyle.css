@@ -1,0 +1,719 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+}
+div
+{
+  transition: 0.5s
+}
+.main
+{
+  overflow-y: hidden;
+}
+body {
+  min-height: 100vh;  
+  position: relative;
+}
+:root
+{
+  --blue: #000000;
+  --white: #242b3f;
+  --grey: #121521;
+  --black1: #fff;
+  --black2: #707a90;
+  --ions: #fff;
+  --joker: #121521;
+  --secondary: #7a849d;
+}
+body
+{
+  overflow-x: hidden;
+}
+
+body
+{
+  background-color: var(--grey);
+}
+
+.hide
+{
+  visibility: hidden
+}
+
+.remove
+{
+  display: none !important;
+}
+
+.container
+{
+  position: relative;
+  width: 100%;
+}
+
+.navigation{
+  position: fixed;
+  top: 60px;
+  width: 220px;
+  height: 100vh;
+  background: var(--blue);
+  border-left: 10px solid var(--blue);
+  transition: 0.5s;
+  font-size: 0.85em;
+}
+
+.PageTittleNavBottom
+{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 220px;
+  height: 60px;
+  transition: 0.5s;
+  background: var(--blue);
+  border-left: 10px solid var(--blue);
+  color: var(--black2);
+}
+
+.PageTittleNavBottom:hover ion-icon, .PageTittleNav:hover ion-icon, .PageTittleNav:hover .title, .PageTittleNavBottom:hover .title
+{
+  color: var(--ions)
+}
+
+.PageTittleNavBottom ion-icon, .PageTittleNav ion-icon, .PageTittleNav .title, .PageTittleNavBottom .title
+{
+  transition: 0.3s
+}
+
+
+.PageTittleNav
+{  
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 220px;
+  height: 60px;
+  transition: 0.5s;
+  background: var(--blue);
+  border-left: 10px solid var(--blue);
+  color: var(--black2);
+}
+
+.navigation.active
+{
+  width: 80px;
+}
+
+.PageTittleNav.active, .PageTittleNavBottom.active
+{
+  width: 80px;
+}
+
+.navigation ul
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 120px);
+  margin-bottom: 60px;
+  transition: 0.5s;
+  overflow: scroll;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;
+}
+
+
+.navigation ul::-webkit-scrollbar {
+  display: none;
+}
+
+
+.navigation ul li
+{
+  position: relative;
+  width: 100%;
+  list-style: none;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+
+.navigation ul li:hover,
+.navigation ul li.hovered,
+.navigation ul li.active
+{
+  background: var(--grey);
+}
+
+.navigation ul li a, .PageTittleNav a, .PageTittleNavBottom a
+{
+  position: relative;
+  display: block;
+  width: 100%;
+  display: flex;
+  text-decoration: none;
+  color: var(--secondary);
+  cursor: pointer;
+}
+.navigation ul li:hover a,
+.navigation ul li.hovered a,
+.navigation ul li.active a
+{
+  color: var(--ions);
+}
+.navigation ul li a .icon, .PageTittleNav .icon, .PageTittleNavBottom .icon
+{
+  position: relative;
+  display: block;
+  min-width: 60px;
+  height: 60px;
+  line-height: 75px;
+  text-align: center;
+}
+.navigation ul li a .icon ion-icon, .PageTittleNav .icon ion-icon, .PageTittleNavBottom .icon ion-icon
+{
+  font-size: 1.75em;
+}
+
+.navigation ul li a .title, .PageTittleNav .title, .PageTittleNavBottom .title
+{
+  position: relative;
+  display: block;
+  padding: 0 10px;
+  height: 60px;
+  line-height: 60px;
+  text-align: start;
+  white-space: nowrap;
+}
+
+.PageTittleNav .title, .PageTittleNavBottom .title
+{
+  color: orange;
+  font-size: 0.9em;
+}
+
+
+/* curve outside */
+
+.navigation ul li:hover a::before,
+.navigation ul li.hovered a::before,
+.navigation ul li.active a::before
+{
+  content: '';
+  position: absolute;
+  right: 0;
+  top: -50px;
+  width: 50px;
+  height: 50px;
+  background: transparent;
+  border-radius: 50px;
+  box-shadow: 35px 35px 0 10px var(--grey);
+}
+
+.navigation ul li:hover a::after,
+.navigation ul li.hovered a::after,
+.navigation ul li.active a::after
+{
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: -50px;
+  width: 50px;
+  height: 50px;
+  background: transparent;
+  border-radius: 50px;
+  box-shadow: 35px -35px 0 10px var(--grey);
+}
+
+.navigation ul li:last-child:hover a::after,
+.navigation ul li:last-child.hovered a::after,
+.navigation ul li:last-child.active a::after
+{
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: -50px;
+  width: 50px;
+  height: 50px;
+  background: transparent;
+  border-radius: 50px;
+  box-shadow: 35px -35px 0 10px var(--grey);
+}
+
+.main
+{
+  position: absolute;
+  width: calc(100% - 220px);
+  left: 220px;
+  min-height: 100vh;
+  background: radial-gradient(closest-side, var(--white), var(--grey));
+  transition: 0.5s;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  font-size: 0.8em;
+}
+
+.main.active
+{
+  background: var(--grey);
+  width: calc(100% - 80px);
+  left: 80px;
+}
+
+.topbar
+{
+  width: 100%;
+  height: 60px;
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  background: var(--white);
+  transition: 0.3s;
+  z-index: 2;
+}
+.Icons
+{
+  position: relative;
+  font-size: 1.2em;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+}
+.Icon
+{
+  padding-top: 20px;
+  height: 60px;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.3s
+}
+.Footer
+{
+  margin-top: auto;
+  width: 100%;
+  height: 60px;
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  background: var(--white);
+  transition: 0.3s;
+}
+.Footer a {
+  color: inherit;
+}
+
+.SocialNetworks
+{
+  position: relative;
+  font-size: 1.2em;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+}
+.SocialNetworks .Icon:hover
+{
+  background-color: var(--grey)
+}
+
+.Social
+{
+  position: relative;
+  cursor: pointer;
+  width: 25px;
+  height: 25px;
+}
+
+.ContactUs
+{
+  position: relative;
+  margin-right: 10%;
+  display: inline-flex;
+  padding-right: 10px;
+  cursor: pointer;
+}
+
+.ContactUs:hover
+{
+    background-color: var(--grey);
+}
+
+.ContactText
+{
+  padding-top: 15px;
+  font-weight: bold;
+  text-align: center;
+  color: var(--ions);
+}
+
+a
+{
+  text-decoration: none;
+}
+
+.Icon:hover
+{
+    background-color: var(--grey);
+}
+
+.toggle
+{
+  position: relative;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5em;
+  cursor: pointer;
+}
+
+.toggleBot
+{
+  position: relative;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5em;
+  cursor: pointer;
+}
+
+.Metamask
+{
+  position: relative;
+  width: 150px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5em;
+}
+#Metamask{
+  position: relative;
+  border-radius: 8px;
+  cursor: pointer;
+}
+#Metamask:hover
+{
+  background-color: orange;
+  border-color: orange;
+  box-shadow: -1px 2px 50px -10px gray;
+  top:-1px
+}
+#MetamaskIcon{
+  position: relative;
+  width: 25px;
+  height: 25px;
+  top: 2px;
+  margin-left: 3px;
+}
+#TextMetamask
+{
+  text-decoration: none !important;
+  color: inherit;
+  position: relative;
+  bottom: 5px;
+  margin-right: 5px;
+}
+
+.metamaskAddress
+{
+  font-size: 0.3em;
+  margin-right: 200px;
+}
+
+.divsSeparation{
+  position: relative;
+  top: 5px;
+  border: 1px solid;
+  border-image: linear-gradient(to right, var(--grey), var(--black2), var(--grey)) 1;
+  width: 65%;
+  margin-left: calc(17.5%);
+}
+
+.topbar ion-icon
+{
+  color: var(--ions);
+}
+
+.Footer ion-icon
+{
+  color: var(--ions);
+}
+
+.PageTittleNav ion-icon, .PageTittleNavBottom ion-icon
+{
+  color: orange;
+}
+
+.PageTittleNav .icon, .PageTittleNavBottom .icon
+{
+  font-size: 0.85em;
+}
+
+.navigation ion-icon
+{
+  color: var(--ions)
+}
+
+ion-icon
+{
+    pointer-events: none;
+    background-color: inherit;
+    transition: 0.3s
+}
+
+.CurrencyChange
+{
+  padding: 10px;
+  position: fixed;
+  top: 40%;
+  left: 45%;
+  min-width: 1px;
+  min-height: 1px;
+  background-color: var(--white);
+  box-shadow: 0px 2px 3px 2px black;
+  color: var(--black2);
+  border-radius: 10px;
+  z-index: 2;
+}
+
+.CurrencyChange .Tittle
+{
+  padding: 15px;
+  color: var(--ions);
+  font-weight: bold;
+}
+
+.CurrencyChange .Currencies
+{
+  padding: 15px;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  color: #b1bad3;
+}
+
+.rad-label
+{
+  margin: 6px;
+}
+
+.rad-label ion-icon, .rad-label img
+{
+  position: relative;
+  width: 20px;
+  height: 20px;
+  background-color: green;
+  padding: 3.5px;
+  top: 1px;
+  margin-left: 3.5px;
+  border-radius: 10px;
+}
+
+/* MAIN */
+/* =============================================== */
+.rad-label {
+  display: flex;
+  align-items: center;
+
+  border-radius: 100px;
+  padding: 14px 16px;
+  margin: 10px 0;
+
+  cursor: pointer;
+  transition: .3s;
+}
+
+.rad-label:hover,
+.rad-label:focus-within {
+  background: hsla(0, 0%, 80%, .14);
+}
+
+.rad-input {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  z-index: -1;
+}
+
+.rad-design {
+  width: 22px;
+  height: 22px;
+  border-radius: 100px;
+
+  background: linear-gradient(to right bottom, hsl(154, 97%, 62%), hsl(225, 97%, 62%));
+  position: relative;
+}
+
+.rad-design::before {
+  content: '';
+
+  display: inline-block;
+  width: inherit;
+  height: inherit;
+  border-radius: inherit;
+
+  background: hsl(0, 0%, 90%);
+  transform: scale(1.1);
+  transition: .3s;
+}
+
+.rad-input:checked+.rad-design::before {
+  transform: scale(0);
+}
+
+.rad-text {
+  color: hsl(0, 0%, 60%);
+  margin-left: 14px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 900;
+
+  transition: .3s;
+}
+
+.rad-input:checked~.rad-text {
+  color: hsl(0, 0%, 40%);
+}
+
+
+/* ABS */
+/* ====================================================== */
+.abs-site-link {
+  position: fixed;
+  bottom: 40px;
+  left: 20px;
+  color: hsla(0, 0%, 0%, .5);
+  font-size: 16px;
+}
+
+.utcTime
+{
+  color: var(--black2);
+  font-style: italic;
+  font-size: 0.75em;
+  padding-top: 5px;
+}
+
+/* From uiverse.io by @mrhyddenn */
+.loaderSpiner {
+  width: 6em;
+  height: 6em;
+  font-size: 10px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: calc(50% - 3em);
+  margin-top: 6em;
+  margin-bottom: 6em;
+}
+
+.loaderSpiner .face {
+  position: absolute;
+  border-radius: 50%;
+  border-style: solid;
+  animation: animate023845 3s linear infinite;
+}
+
+.loaderSpiner .face:nth-child(1) {
+  width: 100%;
+  height: 100%;
+  color: var(--ions);
+  border-color: currentColor transparent transparent currentColor;
+  border-width: 0.2em 0.2em 0em 0em;
+  --deg: -45deg;
+  animation-direction: normal;
+}
+
+.loaderSpiner .face:nth-child(2) {
+  width: 70%;
+  height: 70%;
+  color: lime;
+  border-color: currentColor currentColor transparent transparent;
+  border-width: 0.2em 0em 0em 0.2em;
+  --deg: -135deg;
+  animation-direction: reverse;
+}
+
+.loaderSpiner .face .circle {
+  position: absolute;
+  width: 50%;
+  height: 0.1em;
+  top: 50%;
+  left: 50%;
+  background-color: transparent;
+  transform: rotate(var(--deg));
+  transform-origin: left;
+}
+
+.loaderSpiner .face .circle::before {
+  position: absolute;
+  top: -0.5em;
+  right: -0.5em;
+  content: '';
+  width: 1em;
+  height: 1em;
+  background-color: currentColor;
+  border-radius: 50%;
+  box-shadow: 0 0 2em,
+                0 0 4em,
+                0 0 6em,
+                0 0 8em,
+                0 0 10em,
+                0 0 0 0.5em rgba(255, 255, 0, 0.1);
+}
+
+@keyframes animate023845 {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .main.active
+  {
+    left: 0px;
+    width: 100%;
+  }
+  .main:not(.active) > *:not(.topbar):not(.Footer)
+  {
+    position: relative;
+    left: 120%;
+  }
+  .main:not(.active)
+  {
+    left: 85%;
+  }
+  .navigation
+  {
+    width: 85%;
+    display: flex;
+    justify-content: center;
+  }
+  .PageTittleNav, .PageTittleNavBottom
+  {
+    width: 85%;
+    display: flex;
+    justify-content: center;
+  }
+  .navigation ul li a, .PageTittleNav a, .PageTittleNavBottom a
+  {
+    display: flex;
+    justify-content: center;
+  }
+}

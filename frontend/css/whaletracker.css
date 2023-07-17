@@ -1,0 +1,348 @@
+.Boxie, .BoxieTest
+{
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+
+.WhalesCheck, .WhalesCheckTest
+{
+  background-color: var(--white);
+  color: var(--ions);
+  padding-bottom: 10px;
+  border-radius: 15px;
+  font-weight: bold;
+  box-shadow: 0px 2px 3px black;
+}
+
+.WhalesCheck .Tittle, .WhalesCheckTest .TittleTest
+{
+  display: flex;
+  justify-content: center;
+  padding: 20px 10px 15px 10px;
+  border-bottom: 2px solid;
+  border-image: linear-gradient(to right, var(--white), var(--ions), var(--white)) 1;
+  text-align: center;
+}
+
+.WhalesGrid, .WhalesGridTest
+{
+  margin: 20px;
+  display: grid;
+  grid-template-columns: repeat(5,1fr);
+  grid-gap: 35px;
+}
+
+.WhalesGrid button, .WhalesGridTest button
+{
+  position: relative;
+  padding: 12.5px 0px 12.5px 0px;
+  font-weight: bold;
+  font-size: 1em;
+  background-color: var(--grey);
+  color: var(--ions);
+  border-color: var(--grey);
+  border-style: solid;
+  border-radius: 10px;
+  vertical-align: middle;
+  box-shadow: 0px 2px 3px black;
+}
+
+.WhalesGrid button span, .WhalesGridTest button span
+{
+  margin-left: 8px;
+  border: 2px solid var(--ions);
+  cursor: pointer;
+  vertical-align: middle;
+  background-image: linear-gradient(var(--white),var(--black2));
+  border-radius: 7.5px;
+  padding: 2px;
+}
+
+.WhalesGrid button ion-icon, .WhalesGridTest button ion-icon
+{
+  position: relative;
+  color: var(--ions);
+  font-size: 1.3em;
+  top: 3.5px;
+  pointer-events: all;
+}
+
+.DayMoves, .DayMovesTest
+{
+  position: relative;
+  background-color: var(--white);
+  color: var(--black2);
+  margin-top: 25px;
+  border-radius: 15px;
+  font-weight: bold;
+  box-shadow: 0px 2px 3px black;
+  width: 100%;
+}
+
+.DayMoves .Tittle, .DayMovesTest .TittleTest
+{
+  padding: 20px 0px 15px 0px;
+  color: var(--ions);
+  display: flex;
+  justify-content: center;
+}
+
+.DaySelect, .DaySelectTest
+{
+  position: inherit;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+  padding: 0px 0px 5px 0px;
+}
+
+.Day, .DayTest
+{
+  line-height: 22.5px;
+  color: var(--ions);
+  font-weight: bold;
+}
+
+.DaySelect ion-icon, .DaySelectTest ion-icon
+{
+  width: 22.5px;
+  height: 22.5px;
+  color: var(--ions);
+}
+
+.DaySelect .Left, .DaySelect .Right, .DaySelectTest .LeftTest, .DaySelectTest .RightTest
+{
+  width: 22.5px;
+  height: 22.5px;
+  margin-right: 15px;
+  margin-left: 15px;
+}
+
+.DaySelect .Left:hover, .DaySelect .Right:hover, .DaySelectTest .LeftTest:hover, .DaySelectTest .RightTest:hover
+{
+  box-shadow: 0px 1px 5px 1px black;
+  border-radius: 15px;
+}
+
+.DaySelect button, .DaySelectTest button
+{
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.LeftMoves, .LeftMovesTest
+{
+  vertical-align: middle;
+  display: inline-block;
+  padding: 20px 5px 20px 5px;
+  width: 100%;
+  overflow-x: scroll;
+}
+
+/*TESTTTTT*/
+
+th
+{
+  color: var(--ions);
+  border-bottom: 1px solid var(--ions);
+  padding: 5px;
+}
+
+table
+{
+  width: 90%;
+  position: relative;
+  left: 5%;
+  border-collapse: collapse;
+}
+
+td
+{
+  text-align: center;
+  padding: 7.5px;
+  border-bottom: 1px solid var(--black2)
+}
+
+td img
+{
+  width: 20px;
+  vertical-align: middle;
+}
+
+/*NO TESTTT*/
+
+.WhaleMoves .Name, .WhaleMovesTest .NameTest
+{
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-style: italic;
+  font-weight: bold;
+  color: var(--ions);
+}
+
+.Line, .LineTest
+{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 10px;
+}
+
+.Line a, .LineTest a
+{
+  margin-left: 10px;
+}
+
+.Line img, .LineTest img
+{
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+}
+
+.Line .Date, .LineTest .DateTest
+{
+  font-size: 0.75em;
+  line-height: 22px;
+}
+
+.RightMoves, .RightMovesTest
+{
+  vertical-align: middle;
+  padding-bottom: 20px;
+  padding-left: 15px;
+  padding-right: 15px;
+  display: inline-block;
+  justify-content: center;
+  width: 30%;
+}
+
+.RightBox, .RightBoxTest
+{
+  background-color: var(--grey);
+  border-radius: 15px;
+  vertical-align: top;
+  box-shadow: 0px 2px 3px black;
+  margin-top: 20px;
+}
+
+.RightBox .TittleBox, .RightBoxTest .TittleBoxTest
+{
+  color: var(--black1);
+  padding: 20px 30px 10px 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.RightBox .NumberBox, .RightBoxTest .NumberBoxTest
+{
+  color: var(--black2);
+  padding: 10px 30px 10px 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.Alert
+{
+  position: absolute;
+  width: 100%;
+  font-weight: bold;
+  color: var(--black2);
+  display: flex;
+  justify-content: center;
+  background-color: rgb(127, 127, 127, 0.3);
+  border-radius: 15px;
+  height: 100%;
+  z-index: 1;
+}
+
+.text
+{
+  position: relative;
+  top:50%;
+}
+
+.text a, .text button
+{
+  background-color: var(--white);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 7px 25px rgba(0,0,0,0.08);
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.text a:hover, .text button:hover
+{
+top: -1px;
+box-shadow: 0px 1px 5px 1px black;
+}
+
+.text img
+{
+  position: relative;
+  width: 25px;
+  height: 25px;
+  top: 7.5px;
+  margin-right: 7.5px;
+}
+
+hr
+{
+  border-image: linear-gradient(to right, var(--white), var(--black2), var(--white)) 1;
+}
+
+h1
+{
+  color: var(--ions);
+  border-left: 1px solid;
+  padding: 10px;
+  font-size: 1.3em;
+  margin: auto;
+  margin-left: 10px;
+  border-image: linear-gradient(var(--grey), var(--ions)) 1;
+}
+
+h2
+{
+  border-left: 1px solid;
+  color: var(--black2);
+  padding: 10px;
+  font-size: 1em;
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  border-image: linear-gradient(var(--grey), var(--black2)) 1;
+}
+
+@media only screen and (max-width: 1240px) {
+  .main:not(.active) .WhalesGrid, .main:not(.active) .WhalesGridTest
+  {
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 10px;
+  }
+  .main:not(.active) .LeftMoves, .main:not(.active) .LeftMovesTest
+  {
+    overflow-x: scroll;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  .main.active .WhalesGrid, .main.active .WhalesGridTest
+  {
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 10px;
+  }
+  .main.active .LeftMoves, .main.active .LeftMovesTest
+  {
+    overflow-x: scroll;
+  }
+}

@@ -1,0 +1,181 @@
+.BigBox
+{
+  padding: 20px;
+}
+
+.BigBox .Tittle
+{
+  display: flex;
+  justify-content: center;
+  color: var(--black1);
+  font-weight: bold;
+}
+
+.GasGrid
+{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  padding: 30px;
+  grid-gap: 40px;
+}
+
+.GasBox
+{
+  background-color: var(--white);
+  border-radius: 15px;
+  box-shadow: 0 7px 25px rgba(0,0,0,0.08);
+}
+
+.GasBox .GasEnum
+{
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  color: var(--black1);
+  font-size: 1.2em;
+  font-weight: bold;
+  border-bottom: 2px solid;
+  border-image: linear-gradient(to right, var(--white), var(--ions), var(--white)) 1;
+}
+
+.GasBox .GasNum
+{
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  font-size: 1.2em;
+  color: var(--black2);
+}
+
+.GasBox .Gwei
+{
+  margin-left: 7.5px;
+}
+
+
+.GasBox .usdPrice
+{
+  display: flex;
+  justify-content: center;
+  padding-top: 5px;
+  padding-bottom: 10px;
+  color: #2b753e;
+  font-weight: bold;
+}
+
+.GasBox .usdPrice .dollar
+{
+  margin-left: 2px;
+}
+
+table
+{
+  width: 100%;
+  margin-top: 15px;
+  background-color: var(--white);
+  padding: 15px;
+  border-radius: 10px;
+  border-spacing: 1px;
+  box-shadow: 0 7px 25px rgba(0,0,0,0.08);
+}
+
+table th:first-child
+{
+  width: 5%;
+}
+
+table th
+{
+  width: calc(95%/7);
+  color: var(--black2);
+  font-weight: bold;
+  padding-bottom: 5px;
+  border-bottom: 2px solid;
+  border-image: linear-gradient(to right, var(--white), var(--ions), var(--white)) 1;
+}
+table td:first-child
+{
+  color: var(--black2);
+  text-align: center;
+  font-weight: bold;
+}
+
+table td:nth-child(n+2)
+{
+  text-align: center;
+  font-size: 0.85em;
+  font-style: italic;
+  color: transparent;
+  padding: 3px;
+  border-radius: 4px;
+}
+
+table td:nth-child(n+2):hover
+{
+  color: var(--black2);
+  font-weight: bold;
+}
+
+table tr:nth-child(2)
+{
+  padding-top: 125px;
+}
+
+h1
+{
+  border-left: 1px solid var(--black2);
+  color: var(--black2);
+  padding: 10px;
+  font-size: 1.3em;
+  margin: auto;
+  border-image: linear-gradient(var(--grey), var(--ions)) 1;
+}
+
+@media only screen and (max-width: 740px) {
+  .main:not(.active) th
+  {
+    font-size: 0.75em;
+  }
+  .main:not(.active) table td:nth-child(n+2)
+  {
+    font-size: 0.75em;
+    padding: 1px;
+  }
+  .main:not(.active) table
+  {
+    padding: 5px;
+  }
+  .main:not(.active) .GasGrid
+  {
+    grid-template-columns: repeat(1,1fr);
+  }
+  .main:not(.active) h1
+  {
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .main.active th
+  {
+    font-size: 0.75em;
+  }
+  .main.active table td:nth-child(n+2)
+  {
+    font-size: 0.75em;
+    padding: 1px;
+  }
+  .main.active table
+  {
+    padding: 5px;
+  }
+  .main.active .GasGrid
+  {
+    grid-template-columns: repeat(1,1fr);
+  }
+  .main.active h1
+  {
+    text-align: center;
+  }
+}

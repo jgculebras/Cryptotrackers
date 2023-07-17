@@ -1,0 +1,90 @@
+.MediaHelp
+{
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+.MediaBox
+{
+  position: relative;
+  width: 100%;
+  padding:20px;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-gap: 25px;
+}
+.MediaBox .MediaCard
+{
+  position: relative;
+  background: var(--white);
+  border-radius: 20px;
+  box-shadow: 0 7px 25px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+.MediaBox .YtVideo
+{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+.MediaBox .YtTitle
+{
+  position: relative;
+  display: flex;
+  color: var(--black2);
+  font-weight: bold;
+  justify-content: center;
+  margin-top: 20px;
+}
+.YtChannel
+{
+  position: relative;
+  cursor: pointer;
+  margin-bottom: 15px;
+  margin-left: 20px;
+}
+.YtIcon
+{
+  position: relative;
+  width: 40px;
+  height: 40px;
+  color: red
+}
+.YtName
+{
+  position: relative;
+  font-weight: bold;
+  bottom: 12.5px;
+  margin-left: 5px;
+  color: var(--black2);
+}
+
+@media only screen and (max-width: 1240px) {
+  .main:not(.active) .MediaBox
+  {
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  .main.active .MediaBox
+  {
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+
+@media only screen and (max-width: 940px) {
+  .main:not(.active) .MediaBox
+  {
+    grid-template-columns: repeat(1,1fr);
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .main.active .MediaBox
+  {
+    grid-template-columns: repeat(1,1fr);
+  }
+}

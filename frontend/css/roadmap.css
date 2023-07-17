@@ -1,0 +1,111 @@
+.tittleCon
+{
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 10px
+}
+
+h1
+{
+  color: var(--ions);
+  border-left: 1px solid;
+  padding: 10px;
+  font-size: 1.3em;
+  border-image: linear-gradient(var(--grey), var(--ions)) 1;
+}
+
+h2
+{
+  border-left: 1px solid;
+  color: var(--black2);
+  padding: 10px;
+  font-size: 0.8em;
+  border-image: linear-gradient(var(--grey), var(--black2)) 1;
+}
+
+
+.Overflow
+{
+  overflow: scroll;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;
+}
+
+.Overflow::-webkit-scrollbar {
+  display: none;
+}
+
+.Boxie
+{
+  display: flex;
+  margin: 10px;
+  height: 100%;
+}
+
+.col
+{
+  display: flex;
+  flex: 1;
+  color: var(--black2);
+}
+
+.left {
+  box-shadow: 2px 0 0 var(--ions);
+  float: left;
+  position: relative;
+  display: inline-block;
+  color: var(--black2);
+  text-align: right;
+  padding-right: 35px;
+  line-height: 40px;
+}
+
+.left .Phase:not(:first-child)
+{
+  margin-top: 200px;
+}
+
+.right .Phase:not(:first-child)
+{
+  margin-top: 200px;
+}
+
+.left .Phase::before
+{
+  content: '';
+  position: absolute;
+  left: calc(100% - 20px);
+  width: 40px;
+  height: 40px;
+  background: var(--ions);
+  border-radius: 150px;
+}
+
+.right {
+  box-shadow: -2px 0 0 var(--ions);
+  float: right;
+  position: relative;
+  display: inline-block;
+  padding-top: 137.5px;
+  color: var(--black2);
+  text-align: left;
+  padding-left: 35px;
+  line-height: 40px;
+}
+
+.right .Phase::before
+{
+  content: '';
+  position: absolute;
+  right: calc(100% - 20px);
+  width: 40px;
+  height: 40px;
+  background: var(--ions);
+  border-radius: 100px;
+}
+
+.Date
+{
+  font-weight: bold;
+}

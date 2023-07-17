@@ -1,0 +1,1076 @@
+.group {
+ position: relative;
+ margin: 20px;
+ top: 5px;
+}
+
+.input {
+ font-size: 16px;
+ padding: 10px 10px 10px 5px;
+ display: block;
+ width: 200px;
+ border: none;
+ border-bottom: 1px solid;
+ border-image: linear-gradient(to right, var(--white), var(--ions), var(--white)) 1;
+ background: transparent;
+ color: var(--ions);
+}
+
+.input:focus {
+ outline: none;
+}
+
+.group label {
+ color: var(--black1);
+ font-size: 18px;
+ font-weight: normal;
+ position: absolute;
+ pointer-events: none;
+ left: 5px;
+ top: 10px;
+ transition: 0.2s ease all;
+ -moz-transition: 0.2s ease all;
+ -webkit-transition: 0.2s ease all;
+}
+
+.input:focus ~ label, .input:valid ~ label {
+ top: -20px;
+ font-size: 14px;
+ color: var(--black2);
+}
+
+.bar {
+ position: relative;
+ display: block;
+ width: 200px;
+}
+
+.bar:before, .bar:after {
+ content: '';
+ height: 2px;
+ width: 0;
+ bottom: 1px;
+ position: absolute;
+ background: var(--black1);
+ transition: 0.2s ease all;
+ -moz-transition: 0.2s ease all;
+ -webkit-transition: 0.2s ease all;
+}
+
+.bar:before {
+ left: 50%;
+}
+
+.bar:after {
+ right: 50%;
+}
+
+.input:focus ~ .bar:before, .input:focus ~ .bar:after {
+ width: 50%;
+}
+
+.highlight {
+ position: absolute;
+ height: 60%;
+ width: 100px;
+ top: 25%;
+ left: 0;
+ pointer-events: none;
+ opacity: 0.5;
+}
+
+.input:focus ~ .highlight {
+ animation: inputHighlighter 0.5s ease;
+}
+
+@keyframes inputHighlighter {
+ from {
+  background: var(--black1);
+ }
+
+ to {
+  width: 0;
+  background: transparent;
+ }
+}
+
+.hide
+{
+  visibility: hidden
+}
+
+.remove
+{
+  display: none !important;
+}
+
+.BigBox
+{
+  padding: 20px;
+}
+
+.CoinsBox
+{
+  vertical-align: middle;
+  position: relative;
+  display: inline-block;
+  width: 65%;
+  background-color: var(--white);
+  color: var(--black1);
+  border-radius: 15px;
+  box-shadow: 0 7px 25px rgba(0,0,0,0.08);
+  margin-top: 10px;
+}
+
+.Add
+{
+  display: inline-flex;
+  justify-content: center;
+  width: 33%;
+}
+
+.CoinsBox .Tittle
+{
+  display: inline-flex;
+  position: relative;
+  top:-5px;
+  justify-content: center;
+  padding: 20px;
+  font-weight: bold;
+  font-size: 1.2em;
+  width: 33%;
+}
+
+.Remove
+{
+  display: inline-flex;
+  width: 30%;
+  justify-content: center;
+  position: relative;
+  top: -5px;
+}
+
+.Add button, .Remove button
+{
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0 7px 25px rgba(0,0,0,0.08);
+  background-color: var(--joker);
+  color: var(--black2);
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.Add button:hover, .Remove button:hover
+{
+  top:-1px;
+  box-shadow: 0px 1px 5px 1px black;
+}
+
+.Add ion-icon, .Remove ion-icon
+{
+  vertical-align: middle;
+  margin-right: 5px;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.Add button ion-icon
+{
+  color: green;
+}
+
+.Remove ion-icon
+{
+  color:green;
+}
+
+.CoinsBox .CoinsGrid
+{
+  padding-left: 22px;
+  padding-right: 22px;
+  padding-top: 10px;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  grid-gap: 22px
+}
+
+.CoinsBox .Coin
+{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  background-color: var(--joker);
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 0 7px 25px rgba(0,0,0,0.08);
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.CoinsBox .Coin:hover
+{
+  top:-1px;
+  box-shadow: 0px 1px 5px 1px black;
+}
+
+.CoinsBox .coinIcon
+{
+  position: relative;
+  margin-right: 10px;
+  width: 25px;
+  height: 25px;
+}
+
+.CoinsBox .Coin .coinName
+{
+  line-height: 25px;
+  font-weight: bold;
+  color: var(--black2);
+  text-align: center;
+}
+
+.CoinsBox .PageSelect, .PageSelectSumm
+{
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  position: inherit;
+}
+
+.CoinsBox .PageSelect .PageNow, .PageSelectSumm .PageNowSumm
+{
+  line-height: 25px;
+  color: var(--black2);
+  font-weight: bold;
+}
+
+.CoinsBox .PageSelect ion-icon, .PageSelectSumm ion-icon
+{
+  width: 25px;
+  height: 25px;
+}
+
+.CoinsBox .PageSelect .Left, .CoinsBox .PageSelect .Right, .PageSelectSumm .LeftSumm, .PageSelectSumm .RightSumm
+{
+  width: 25px;
+  height: 25px;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+.CoinsBox .PageSelect .Left:hover, .CoinsBox .PageSelect .Right:hover, .PageSelectSumm .LeftSumm:hover, .PageSelectSumm .RightSumm:hover
+{
+  box-shadow: 0px 1px 5px 1px black;
+  border-radius: 15px;
+}
+
+.CoinsBox .PageSelect button, .PageSelectSumm button
+{
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.RightDiv
+{
+  vertical-align: top;
+  display: inline-block;
+  width: 30%;
+  margin-left: 2.5%;
+  margin-top: 10px;
+}
+
+.ChartBox, .FixedBox
+{
+  position: relative;
+  background-color: var(--white);
+  color: var(--black2);
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  box-shadow: 0 7px 25px rgba(0,0,0,0.08);
+  transition: 0.5s;
+  margin-bottom: 20px;
+}
+
+.PriceOptions
+{
+  box-shadow: 0 7px 25px rgba(0,0,0,0.08);
+  transition: 0.5s;
+  position: relative;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+}
+
+.PriceOption
+{
+  position: relative;
+  cursor: pointer;
+  background-color: var(--grey);
+  color: var(--black2);
+}
+
+.PriceOption:first-child
+{
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.PriceOption:last-child
+{
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+.PriceOption.Selected
+{
+  background-color: var(--white);
+  color: var(--ions);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  cursor: default;
+}
+
+.textPrice
+{
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+  padding: 15px;
+}
+
+.InfoBox
+{
+  position: relative;
+  background-color: var(--white);
+  color: var(--black2);
+  border-radius: 15px;
+  box-shadow: 0 7px 25px rgba(0,0,0,0.08);
+  transition: 0.5s;
+  margin-bottom: 20px;
+  font-size: 0.9em;
+}
+
+.ChartBox .Tittle, .FixedBox .Tittle
+{
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  line-height: 25px;
+  font-weight: bold
+}
+
+.InfoBox .AddText, .InfoBox .SellText
+{
+  padding: 15px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.InfoBox hr
+{
+  border-image: linear-gradient(to right, var(--white), var(--ions), var(--white)) 1;
+}
+
+.CoinsBox button
+{
+  border: none;
+}
+
+.ChartBox img, .FixedBox img
+{
+  width: 25px;
+  height: 25px;
+  margin-right: 10px;
+}
+
+.Form
+{
+  padding: 0px;
+}
+
+.Form .Label, .Form .Input
+{
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  font-weight: bold;
+  color: var(--ions)
+}
+
+.Form .Input
+{
+  height: 35px;
+}
+
+.Form .Submit, .Form .FixedSubmit
+{
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.Submit .Button, .FixedSubmit .Button
+{
+  background-color: var(--blue);
+  position: relative;
+  color: white;
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 0 7px 25px rgba(0,0,0,0.08);
+  border: none;
+  cursor: pointer;
+}
+
+.Submit .Button:hover, .FixedSubmit .Button:hover
+{
+  top:-1px;
+  box-shadow: 0px 1px 5px 1px black;
+}
+
+
+.TotalValue
+{
+  background-color: var(--white);
+  color: var(--black2);
+  border-radius: 15px;
+  box-shadow: 0 7px 25px rgba(0,0,0,0.08);
+  transition: 0.5s;
+}
+
+.Reset
+{
+  margin: 25px;
+  display: flex;
+  justify-content: center;
+  color: var(--black2);
+  transition: 0.5s;
+}
+
+.Reset button
+{
+  position: relative;
+  padding: 10px 20% 10px 20%;
+  font-size: 1.2em;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: #b03828;
+  border-color: #b03828;
+  color: white;
+  box-shadow: 0 7px 25px rgba(0,0,0,0.08);
+  transition: 0.5s;
+}
+
+.Reset button:hover
+{
+  top:-1px;
+  box-shadow: 0px 1px 5px 1px black;
+}
+
+.confirmation
+{
+  position: relative;
+  background-color: var(--white);
+  color: var(--black2);
+  border-radius: 15px;
+  box-shadow: 0px 1px 5px 1px black;
+  transition: 0.5s;
+  padding: 11px;
+}
+
+.confirmation::before
+{
+  content: '';
+  width: 20px;
+  height: 20px;
+  background: var(--white);
+  position: absolute;
+  top: -11px;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  border-left: 2px solid var(--white);
+  border-top: 2px solid var(--white);
+}
+
+.confirmTittle
+{
+  margin-top: 5px;
+}
+
+.confirmbuttons
+{
+  margin-top: 15px;
+}
+
+.confirmbuttons button
+{
+  padding: 10px;
+  width: 29%;
+  margin-left: 10%;
+  margin-right: 10%;
+  position: relative;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: grey;
+  border-color: grey;
+  border-radius: 5px;
+  color: white;
+  transition: 0.2s;
+}
+
+.confirmbuttons button:first-child
+{
+  background-color: #b03828;
+  border-color: #b03828;
+}
+
+.confirmbuttons button:hover
+{
+  top:-1px;
+  box-shadow: 0px 1px 5px 1px black;
+}
+
+.confirmTittle
+{
+  color: var(--black2);
+  font-weight: bold;
+  font-style: italic;
+  display: flex;
+  justify-content: center;
+}
+
+.ValueTittle
+{
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+  padding: 20px;
+  border-bottom: 1px solid;
+  border-image: linear-gradient(to right, var(--white), var(--ions), var(--white)) 1;
+}
+
+.UsdValue
+{
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+  padding: 20px;
+  color: #2D6A4F
+}
+
+.PricePerCoin, .QtyHave
+{
+  padding-bottom: 20px;
+}
+
+.PricePerCoin .TittlePerCoin, .QtyHave .QtyTittle
+{
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: var(--ions);
+}
+
+.PricePerCoin .Numbers, .QtyHave .QtyHaveNumbers
+{
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+  padding-top: 9px;
+  padding-bottom: 5.5px;
+  max-height: 10.5px;
+  color: #2D6A4F
+}
+
+.numCoin
+{
+  margin-left: 3px;
+}
+
+.PortfolioSummary
+{
+  background-color: var(--white);
+  width: 98.25%;
+  margin-top: 20px;
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 0 7px 25px rgba(0,0,0,0.08);
+  transition: 0.5s;
+}
+
+.PortfolioTittle
+{
+  width: 85%;
+  display: flex;
+  justify-content: center;
+  text-align: middle;
+  color: var(--ions);
+  font-weight: bold;
+  margin: 15px;
+}
+
+.Canvas
+{
+  display: inline-block;
+  vertical-align: middle;
+  width: 40%;
+  padding: 20px;
+  min-height: 250px;
+}
+
+.CoinSummary
+{
+  width: 55%;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.CoinSummary .Line
+{
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.TopLine
+{
+  color: var(--ions);
+  border-bottom: 1px solid;
+  border-image: linear-gradient(to right, var(--white), var(--ions), var(--white)) 1;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+
+.CoinSummary img
+{
+  width: 25px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.Line, .TopLine
+{
+  display: grid;
+  grid-template-columns: repeat(5,1fr);
+}
+
+.CoinSummary:first-child
+{
+  border-bottom: 1px solid red
+}
+
+.Line div, .TopLine div
+{
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+}
+
+.LineCanvas
+{
+  overflow: hidden;
+  position: relative;
+  width: 98.25%;
+  margin-top: 20px;
+  background-color: var(--white);
+  color: var(--black2);
+  border-radius: 15px;
+  box-shadow: 0 7px 25px rgba(0,0,0,0.08);
+  transition: 0.5s;
+  min-height: 400px;;
+}
+
+.LineCanvas .TopHeader
+{
+  padding: 35px;
+  line-height: 35px;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: center;
+}
+
+.LineCanvas canvas
+{
+  padding: 15px;
+}
+
+.canvasDiv
+{
+  width: 100%;
+}
+
+.TopHeader div
+{
+  display: inline-flex;
+  width: 35%;
+  justify-content: center;
+}
+
+.TopHeaderTittle
+{
+  font-weight: bold;
+  color: var(--black2);
+}
+
+.TopHeaderNumber
+{
+  margin-left: 5px;
+  color: #2D6A4F;
+  font-weight: bold;
+}
+
+.TopHeaderDollar
+{
+  margin-left: 2px;
+  color: #2D6A4F;
+  font-weight: bold;
+}
+
+.Alert
+{
+  position: absolute;
+  width: 100%;
+  font-weight: bold;
+  color: var(--black2);
+  display: flex;
+  justify-content: center;
+  background-color: rgb(127, 127, 127, 0.3);
+  border-radius: 15px;
+  height: 100%;
+  z-index: 1;
+}
+
+.text
+{
+  position: relative;
+  top:50%;
+}
+
+
+.text a, .text button
+{
+  background-color: var(--white);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 7px 25px rgba(0,0,0,0.08);
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.text a:hover, .text button:hover
+{
+top: -1px;
+box-shadow: 0px 1px 5px 1px black;
+}
+
+.text img
+{
+  position: relative;
+  width: 25px;
+  height: 25px;
+  top: 7.5px;
+  margin-right: 7.5px;
+}
+
+
+
+ion-icon
+{
+  color: var(--ions)
+}
+
+a
+{
+  text-decoration: none;
+    color: inherit;
+}
+
+.textInputWrapper {
+  position: relative;
+  width: 180px;
+  --accent-color: var(--ions);
+  margin: auto;
+}
+
+.textInputWrapper:before {
+  transition: border-bottom-color 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.42);
+}
+
+.textInputWrapper:before,
+.textInputWrapper:after {
+  content: "";
+  left: 0;
+  right: 0;
+  position: absolute;
+  pointer-events: none;
+  bottom: -1px;
+  z-index: 4;
+  width: 100%;
+}
+
+.textInputWrapper:focus-within:before {
+  border-bottom: 1px solid var(--accent-color);
+}
+
+.textInputWrapper:before {
+  transition: border-bottom-color 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.42);
+}
+
+.textInputWrapper:focus-within:before {
+  border-bottom: 1px solid var(--accent-color);
+  transform: scaleX(1);
+}
+
+.textInputWrapper:focus-within:after {
+  border-bottom: 2px solid var(--accent-color);
+  transform: scaleX(1);
+}
+
+.textInputWrapper:after {
+  content: "";
+  transform: scaleX(0);
+  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+  will-change: transform;
+  border-bottom: 2px solid var(--accent-color);
+  border-bottom-color: var(--accent-color);
+}
+
+.textInput::placeholder {
+  transition: opacity 250ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+  opacity: 1;
+  user-select: none;
+  color: rgba(255, 255, 255, 0.582);
+}
+
+.textInputWrapper .textInput {
+  text-align: center;
+  border-radius: 5px 5px 0px 0px;
+  box-shadow: 0px 2px 5px rgb(35 35 35 / 30%);
+  max-height: 36px;
+  background-color: var(--grey);
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 200ms;
+  transition-property: background-color;
+  color: #2D6A4F;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 12px;
+  width: 100%;
+  border-left: none;
+  border-bottom: none;
+  border-right: none;
+}
+
+.textInputWrapper .textInput:focus,
+.textInputWrapper .textInput:active {
+  outline: none;
+}
+
+.textInputWrapper:focus-within .textInput,
+.textInputWrapper .textInput:focus,
+.textInputWrapper .textInput:active {
+  background-color: var(--grey);
+}
+
+.textInputWrapper:focus-within .textInput::placeholder {
+  opacity: 0;
+}
+
+h1
+{
+  color: var(--black2);
+  padding: 5px 10px 5px 10px;
+  margin: auto;
+  font-size: 1.2em;
+  border-left: 1px solid;
+  border-image: linear-gradient(var(--grey), var(--ions)) 1;
+}
+
+
+h4
+{
+  color: var(--black2);
+  padding: 5px 10px 5px 10px;
+  margin: auto;
+  margin-left: 10px;
+  margin-top: 10px;
+  font-size: 1.2em;
+  border-left: 1px solid;
+  border-image: linear-gradient(var(--grey), var(--ions)) 1;
+}
+
+h6
+{
+  font-size: 1em;
+}
+
+@media only screen and (max-width: 1250px) {
+  .main:not(.active) .Add
+  {
+    display: flex;
+    width: 100%;
+  }
+  .main:not(.active) .CoinsBox .Tittle
+  {
+    width: 65%;
+  }
+  .main:not(.active) .CoinsGrid
+  {
+    padding-left: 10px;
+    padding-right: 10px;
+    grid-gap: 10px;
+  }
+  .main:not(.active) .canvasDiv
+  {
+    height: 325px
+  }
+}
+
+@media only screen and (max-width: 1050px) {
+  .main:not(.active) .CoinsBox
+  {
+    width: 100%;
+  }
+  .main:not(.active) .RightDiv
+  {
+    width: 65%;
+    margin-left: 17.5%;
+  }
+  .main:not(.active) .PortfolioTittle, .main:not(.active) .PortfolioSummary .Canvas, .main:not(.active) .CoinSummary
+  {
+    width: 100%;
+  }
+  .main:not(.active) .canvasDiv
+  {
+    height: 275px
+  }
+}
+
+@media only screen and (max-width: 760px) {
+  .main:not(.active) .coinName
+  {
+    display: none;
+  }
+  .main:not(.active) .coinIcon
+  {
+    display: block;
+    margin: auto;
+  }
+  .main:not(.active) .earningsPerc
+  {
+    display: none;
+  }
+  .main:not(.active) .RightDiv
+  {
+    width: 85%;
+    margin-left: 7.5%;
+  }
+  .main:not(.active) .TopHeader
+  {
+    display: block;
+    text-align: center;
+  }
+  .main:not(.active) .TopHeader div
+  {
+    width: 100%
+  }
+  .main:not(.active) .canvasDiv
+  {
+    height: 200px
+  }
+}
+
+@media only screen and (max-width: 1110px) {
+  .main.active .Add
+  {
+    display: flex;
+    width: 100%;
+  }
+  .main.active .CoinsBox .Tittle
+  {
+    width: 65%;
+  }
+  .main.active .CoinsGrid
+  {
+    padding-left: 10px;
+    padding-right: 10px;
+    grid-gap: 10px;
+  }
+  .main.active .canvasDiv
+  {
+    height: 325px
+  }
+}
+
+@media only screen and (max-width: 910px) {
+  .main.active .CoinsBox
+  {
+    width: 100%;
+  }
+  .main.active .RightDiv
+  {
+    width: 65%;
+    margin-left: 17.5%;
+  }
+  .main.active .PortfolioTittle, .main.active .PortfolioSummary .Canvas, .main.active .CoinSummary
+  {
+    width: 100%;
+  }
+  .main.active .canvasDiv
+  {
+    height: 275px
+  }
+}
+
+@media only screen and (max-width: 620px) {
+  .main.active .coinName
+  {
+    display: none;
+  }
+  .main.active .coinIcon
+  {
+    display: block;
+    margin: auto;
+  }
+  .main.active .earningsPerc
+  {
+    display: none;
+  }
+  .main.active .RightDiv
+  {
+    width: 85%;
+    margin-left: 7.5%;
+  }
+  .main.active .Remove
+  {
+    width: 42%;
+  }
+  .main.active .CoinsBox .Tittle
+  {
+    width: 56%;
+  }
+  .main.active .TopHeader
+  {
+    display: block;
+    text-align: center;
+  }
+  .main.active .TopHeader div
+  {
+    width: 100%
+  }
+  .main.active .canvasDiv
+  {
+    height: 200px
+  }
+}

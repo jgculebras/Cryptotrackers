@@ -1,0 +1,65 @@
+.BigBox
+{
+  width: 100%;
+  padding: 30px;
+}
+.Tittle
+{
+  display: flex;
+  justify-content: center;
+  font-size: 1.5em;
+  color: var(--black1);
+  font-weight: bold;
+}
+.MarketsGrid
+{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-gap: 50px;
+  margin-top: 40px;
+}
+.MarketBox
+{
+  background-color: var(--white);
+  color: var(--black2);
+  font-weight: bold;
+  box-shadow: 0 7px 25px rgba(0,0,0,0.08);
+  display: flex;
+  justify-content: center;
+  border-radius: 20px;
+  height: 100px;
+  cursor: pointer;
+}
+.MarketBox:hover
+{
+  top:-1px;
+  box-shadow: 0px 1px 5px 1px black;
+}
+
+.MarketBox a
+{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.ThetanIcon
+{
+  position: relative;
+  top: 12px;
+  width: 45px;
+  height: 45px;
+  margin-right: 10px;
+}
+.MarketThetanTitle
+{
+  line-height: 67.5px;
+  position: relative;
+  margin-top: 15px;
+  font-size: 1.5em;
+}
+.MarketBox a
+{
+  text-decoration: none;
+  color: inherit;
+}

@@ -1,0 +1,257 @@
+.PageSelect, .PageSelectTest
+{
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+  margin-bottom: 25px;
+   position: inherit;
+}
+
+.PageSelect .PageNow, .PageNowTest
+{
+  line-height: 25px;
+  color: var(--black2);
+  font-weight: bold
+}
+
+.PageSelect ion-icon, .PageSelectTest ion-icon
+{
+  width: 25px;
+  height: 25px;
+}
+
+.PageSelect .Left, .PageSelect .Right, .LeftTest, .RightTest
+{
+  width: 25px;
+  height: 25px;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+.PageSelect .Left:hover, .PageSelect .Right:hover, .LeftTest:hover, .RightTest:hover
+{
+  box-shadow: 0px 1px 5px 1px black;
+  border-radius: 15px;
+}
+
+.PageSelect button, .PageSelectTest button
+{
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.pInvestmentBox, .pInvestmentBoxTest
+{
+  padding: 20px;
+}
+
+.tittle, .tittleTest
+{
+  color: var(--ions);
+  font-weight: bold;
+}
+
+.MovesBox, .MovesBoxTest
+{
+  position: relative;
+  background-color: var(--white);
+  color: var(--black2);
+  margin-top: 25px;
+  border-radius: 15px;
+  font-weight: bold;
+  box-shadow: 0px 2px 3px black;
+  width: 100%;
+  overflow: hidden;
+}
+
+.LeftBox, .LeftBoxTest
+{
+  vertical-align: top;
+  margin: 2%;
+  display: inline-block;
+  width: 60%;
+}
+
+.RightBox, .RightBoxTest
+{
+  margin: 2%;
+  display: inline-block;
+  width: 31%;
+}
+
+.Month .name, .nameTest
+{
+  display: flex;
+  justify-content: center;
+  color: var(--ions);
+  font-style: italic;
+  padding: 15px 0px 10px 0px;
+  border-bottom: 1px solid;
+  border-image: linear-gradient(to right, var(--white), var(--ions), var(--white)) 1;
+}
+
+.profitBox, .profitBoxTest
+{
+  background-color: var(--grey);
+  border-radius: 15px;
+  vertical-align: top;
+  box-shadow: 0px 2px 3px black;
+  margin-top: 20px;
+}
+
+.profitBox .TittleBox, .TittleBoxTest
+{
+  color: var(--black1);
+  padding: 20px 30px 10px 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.profitBox .NumberBox, .NumberBoxTest
+{
+  color: var(--black2);
+  padding: 10px 30px 10px 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.Action, .ActionTest
+{
+  margin-left: 0px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.Action span, .ActionTest span
+{
+  font-size: 0.7em;
+  vertical-align: middle;
+  line-height: 22px;
+  margin-right: 10px;
+}
+
+.Alert
+{
+  position: absolute;
+  width: 100%;
+  font-weight: bold;
+  color: var(--black2);
+  display: flex;
+  justify-content: center;
+  background-color: rgb(127, 127, 127, 0.3);
+  border-radius: 15px;
+  height: 100%;
+  z-index: 1;
+}
+
+.text
+{
+  position: relative;
+  top:50%;
+}
+
+.text a, .text button
+{
+  background-color: var(--white);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 7px 25px rgba(0,0,0,0.08);
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.text a:hover, .text button:hover
+{
+top: -1px;
+box-shadow: 0px 1px 5px 1px black;
+}
+
+.text img
+{
+  position: relative;
+  width: 25px;
+  height: 25px;
+  top: 7.5px;
+  margin-right: 7.5px;
+}
+
+ion-icon
+{
+  color: var(--ions)
+}
+
+h1
+{
+  color: var(--ions);
+  border-left: 1px solid;
+  padding: 10px;
+  font-size: 1.3em;
+  margin: auto;
+  margin-left: 10px;
+  border-image: linear-gradient(var(--grey), var(--ions)) 1;
+}
+
+h2
+{
+  border-left: 1px solid;
+  color: var(--black2);
+  padding: 10px;
+  font-size: 1em;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  border-image: linear-gradient(var(--grey), var(--black2)) 1;
+}
+
+@media only screen and (max-width: 1000px) {
+  .main:not(.active) .RightBox, .main:not(.active) .RightBoxTest
+  {
+    margin: 0px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    margin-bottom: 10px
+  }
+  .main:not(.active) .profitBox, .main:not(.active) .profitBoxTest
+  {
+    display: inline-block;
+    margin: 10px;
+  }
+  .main:not(.active) .profitBox .TittleBox, .main:not(.active) .TittleBoxTest
+  {
+    display: block;
+    text-align: center;
+  }
+  .main:not(.active) .LeftBox, .main:not(.active) .LeftBoxTest
+  {
+    width: 93%;
+  }
+}
+
+@media only screen and (max-width: 860px) {
+  .main.active .RightBox, .main.active .RightBoxTest
+  {
+    margin: 0px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    margin-bottom: 10px
+  }
+  .main.active .profitBox, .main.active .profitBoxTest
+  {
+    display: inline-block;
+    margin: 10px;
+  }
+  .main.active .profitBox .TittleBox, .main.active .TittleBoxTest
+  {
+    display: block;
+    text-align: center;
+  }
+  .main.active .LeftBox, .main.active .LeftBoxTest
+  {
+    width: 93%;
+  }
+}
